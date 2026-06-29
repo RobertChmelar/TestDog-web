@@ -113,6 +113,17 @@
   .tier .desc{font-size:14.5px;color:var(--inkSoft)}
   .tier .lives{margin-top:12px;font-size:18px}
 
+  /* Mobil: menší bloky – ikona/číslo v jednom řádku s nadpisem */
+  @media(max-width:640px){
+    .grid .card{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;padding:20px 22px}
+    .grid .card .ico{margin-bottom:0;font-size:30px}
+    .grid .card h3{margin-bottom:0}
+    .grid .card p{grid-column:1 / -1;margin-top:8px}
+    .tier{padding:20px 24px}
+    .tier .d{display:inline-block;font-size:34px;vertical-align:baseline}
+    .tier .u{display:inline-block;margin:0 0 0 8px;vertical-align:baseline}
+  }
+
   /* ---- FAQ ---- */
   .faq{max-width:720px;margin:0 auto}
   details{background:var(--card);border-radius:18px;padding:4px 22px;margin-bottom:12px;box-shadow:0 4px 12px rgba(60,90,55,.08)}
@@ -169,7 +180,7 @@
     <p class="lead">TestDog je trenažér zodpovědnosti. Staráš se o virtuálního psa v <b>reálném čase</b>. Žádné podvádění, skutečný čas a skutečné kroky z krokoměru telefonu.</p>
     <div class="hero-cta">
       <a href="#stahnout" class="btn amber">🐾 Chci to zkusit</a>
-      <a href="#jak" class="btn" style="background:var(--greenSoft);color:var(--ink);box-shadow:none">Jak to funguje</a>
+      <a href="#jak" class="btn">Jak to funguje</a>
     </div>
     <p class="hero-note">Brzy pro iPhone i Android • hra zdarma</p>
     <div class="pills">
@@ -313,7 +324,8 @@
       <h2 class="sec-title" style="margin-bottom:12px">TestDog je na cestě 🐾</h2>
       <p class="sec-sub" style="margin-bottom:26px">Pracujeme na vydání pro iPhone i Android. Chceš dát vědět, až to půjde stáhnout? Nech nám na sebe e‑mail.</p>
       <!-- Formulář odesílá přes Web3Forms (zdarma). E-mail příjemce není ve zdroji stránky,
-           je schovaný za přístupovým klíčem. Postup, jak klíč získat, je v NAVOD-nasazeni.md. -->
+           je schovaný za přístupovým klíčem. Cíl (info@testdog.app) se nastavuje v dashboardu
+           Web3Forms, ne tady v kódu – viz NAVOD-nasazeni.md, část C. -->
       <form class="signup" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="fa2aac92-5e60-4228-835e-0d7c5a8ae578">
         <input type="hidden" name="subject" value="TestDog – nový zájemce z webu">
@@ -334,7 +346,7 @@
   <div class="wrap">
     <div class="brand"><img src="dog.png" alt="" style="width:30px;height:30px;border-radius:9px"> TestDog</div>
     <p>Trenažér zodpovědnosti pro budoucí psí páníčky. Vznikl s láskou k živým zvířatům 🐶</p>
-    <p style="margin-top:8px">© <span id="rok"></span> TestDog • <a href="#stahnout">Napiš nám</a></p>
+    <p style="margin-top:8px">© <span id="rok"></span> TestDog • <a href="soukromi/">Zásady ochrany soukromí</a> • <a href="#stahnout">Napiš nám</a></p>
   </div>
 </footer>
 
