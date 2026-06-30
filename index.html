@@ -116,6 +116,30 @@
     .cert-text p{margin-left:auto;margin-right:auto}
   }
 
+  /* ---- Mockupy telefonů (3D perspektiva) ---- */
+  .frame{position:relative;width:230px;background:linear-gradient(135deg,#46484b,#1f2022 38%,#2c2d30 70%,#454649);
+    border-radius:34px;padding:7px;transition:transform .4s ease, filter .4s ease;
+    filter:drop-shadow(0 26px 34px rgba(20,30,24,.42))}
+  .frame img{display:block;width:100%;border-radius:28px}
+  .frame .island{position:absolute;top:13px;left:50%;transform:translateX(-50%);
+    width:26%;max-width:56px;height:15px;background:#08080a;border-radius:11px;z-index:3}
+
+  /* Tři telefony – vějíř, dominantní střed (hlavní herní obrazovka) */
+  .shots-section{padding:30px 0 6px}
+  .shots-trio{display:flex;justify-content:center;align-items:center;perspective:2000px}
+  .shots-trio .frame{width:196px;margin:0 -18px;transform:rotateY(20deg) rotateZ(-4deg);transition:transform .4s ease, filter .4s ease}
+  .shots-trio .frame:nth-child(1){z-index:1}
+  .shots-trio .frame:nth-child(2){transform:rotateY(20deg) rotateZ(-4deg) translateY(-20px) scale(1.18);z-index:3}
+  .shots-trio .frame:nth-child(3){z-index:2}
+  .shots-trio .frame:hover{z-index:5}
+  .shots-trio .frame:nth-child(1):hover{transform:rotateY(10deg) rotateZ(-2deg) scale(1.05)}
+  .shots-trio .frame:nth-child(2):hover{transform:rotateY(12deg) rotateZ(-2deg) translateY(-26px) scale(1.22)}
+  .shots-trio .frame:nth-child(3):hover{transform:rotateY(10deg) rotateZ(-2deg) scale(1.05)}
+  @media(max-width:600px){
+    .shots-trio .frame{width:30vw;margin:0 -2.4vw;transform:rotateY(18deg) rotateZ(-3deg)}
+    .shots-trio .frame:nth-child(2){transform:rotateY(18deg) rotateZ(-3deg) translateY(-12px) scale(1.16)}
+  }
+
   /* ---- Tiers ---- */
   .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
   .tier{background:var(--card);border-radius:24px;padding:28px 24px;text-align:center;box-shadow:0 6px 18px rgba(60,90,55,.10);border:1px solid rgba(62,124,79,.08)}
@@ -219,6 +243,16 @@
         <h3>Důkaz pro celou rodinu</h3>
         <p>Skvělé pro děti i dospělé, kteří zvažují pořízení psa. Certifikát ukáže, že rutinu zvládáte.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="shots-section">
+  <div class="wrap">
+    <div class="shots-trio">
+      <div class="frame"><span class="island"></span><img src="screen-setup.png" alt="Úvodní nastavení aplikace TestDog – jméno psa, délka výzvy a porce kroků" loading="lazy"></div>
+      <div class="frame"><span class="island"></span><img src="screen-home.png" alt="Hlavní herní obrazovka TestDog – sytost, nálada a denní okna" loading="lazy"></div>
+      <div class="frame"><span class="island"></span><img src="screen-walk.png" alt="Obrazovka venčení v TestDog – počítání skutečných kroků z krokoměru" loading="lazy"></div>
     </div>
   </div>
 </section>
