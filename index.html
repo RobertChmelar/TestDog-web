@@ -72,8 +72,18 @@
   .hero h1{font-size:clamp(34px,6vw,56px);max-width:760px;margin:0 auto 18px}
   .hero h1 .hl{color:var(--green)}
   .hero p.lead{font-size:clamp(17px,2.4vw,21px);color:var(--inkSoft);max-width:600px;margin:0 auto 30px}
-  .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+  .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;align-items:center}
   .hero-note{font-size:14px;color:var(--inkSoft);opacity:.85}
+  /* Tlačítka obchodů */
+  .stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center}
+  .store-btn{display:inline-flex;align-items:center;gap:11px;background:#111;color:#fff;text-decoration:none;
+    padding:11px 22px;border-radius:15px;box-shadow:0 8px 22px rgba(0,0,0,.20);transition:transform .12s, box-shadow .12s}
+  .store-btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.26)}
+  .store-btn svg{width:26px;height:26px;flex-shrink:0}
+  .store-btn .st-sub{font-size:11px;line-height:1.1;opacity:.9;display:block}
+  .store-btn .st-main{font-family:'Gabarito';font-weight:800;font-size:18px;line-height:1.15;display:block}
+  .store-btn.soon{background:var(--greenSoft);color:var(--inkSoft);box-shadow:none;cursor:default}
+  .store-btn.soon svg{opacity:.6}
   .pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:34px}
   .pill{background:var(--greenSoft);color:var(--ink);font-weight:700;font-size:14px;padding:8px 16px;border-radius:99px}
 
@@ -182,6 +192,22 @@
   .hp{position:absolute;left:-9999px;opacity:0}
   .form-note{font-size:13px;color:var(--inkSoft);margin-top:12px}
   .form-ok{font-family:'Gabarito';font-weight:800;font-size:19px;color:var(--green);padding:14px 0}
+  .android-notify{border-top:1px solid rgba(62,124,79,.15);margin-top:26px;padding-top:24px;max-width:440px;margin-left:auto;margin-right:auto}
+  .notify-label{font-family:'Gabarito';font-weight:800;font-size:16px;color:var(--ink);margin-bottom:14px}
+  /* Kontaktní okno */
+  dialog.modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);margin:0;
+    border:none;border-radius:24px;padding:0;width:92%;max-width:440px;max-height:90vh;overflow:auto;background:var(--card);
+    box-shadow:0 30px 70px rgba(34,55,43,.35)}
+  dialog.modal::backdrop{background:rgba(34,55,43,.45);backdrop-filter:blur(2px)}
+  .modal-inner{position:relative;padding:34px 30px 30px}
+  .modal-inner h3{font-family:'Gabarito';font-weight:900;font-size:23px;color:var(--ink);margin-bottom:6px}
+  .modal-sub{color:var(--inkSoft);font-size:15px;margin-bottom:18px}
+  .modal-close{position:absolute;top:14px;right:16px;width:34px;height:34px;border:none;border-radius:99px;
+    background:var(--greenSoft);color:var(--ink);font-size:20px;font-weight:800;line-height:1;cursor:pointer}
+  .contact-form textarea{width:100%;font-family:'Nunito',sans-serif;font-size:16px;padding:12px 16px;border:1.5px solid var(--greenSoft);
+    border-radius:14px;background:#fff;color:var(--ink);outline:none;resize:vertical;min-height:100px;margin-bottom:12px;transition:border-color .15s}
+  .contact-form textarea:focus{border-color:var(--green)}
+  .contact-form textarea::placeholder{color:#9aa89b}
   @media(max-width:480px){.field-row{flex-direction:column}}
 
   /* ---- Footer ---- */
@@ -203,7 +229,7 @@
       <a href="#jak">Jak se hraje</a>
       <a href="#vyzva">Výzva</a>
       <a href="#faq">Časté dotazy</a>
-      <a href="#stahnout" class="btn">Chci to zkusit</a>
+      <a href="#stahnout" class="btn">Stáhnout</a>
     </div>
   </div>
 </nav>
@@ -216,10 +242,13 @@
     <h1>Dokaž, že se <span class="hl">dokážeš postarat</span> o psa.</h1>
     <p class="lead">TestDog je trenažér zodpovědnosti. Staráš se o virtuálního psa v <b>reálném čase</b>. Žádné podvádění, skutečný čas a skutečné kroky z krokoměru telefonu.</p>
     <div class="hero-cta">
-      <a href="#stahnout" class="btn amber">🐾 Chci to zkusit</a>
+      <a class="store-btn" href="https://apps.apple.com/cz/app/testdog/id6784382251" target="_blank" rel="noopener">
+        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        <span><span class="st-sub">Stáhnout na</span><span class="st-main">App Store</span></span>
+      </a>
       <a href="#jak" class="btn">Jak to funguje</a>
     </div>
-    <p class="hero-note">Brzy pro iPhone i Android • hra zdarma</p>
+    <p class="hero-note">Zdarma pro iPhone • verze pro Android se chystá</p>
     <div class="pills">
       <span class="pill">⏱️ Reálný čas</span>
       <span class="pill">👟 Skutečné kroky</span>
@@ -363,8 +392,8 @@
         <p>Hra samotná je zdarma. Platí se jen volitelné úlevy a záchrany (např. když nestíháš), které k poctivému zvládnutí hry vůbec nepotřebuješ. A pozor, použitá placená záchrana znamená, že certifikát nebude zlatý.</p>
       </details>
       <details>
-        <summary>Na jaké telefony to bude?</summary>
-        <p>Připravujeme verzi pro iPhone i Android. Nech nám na sebe kontakt níže a dáme ti vědět, jakmile půjde stáhnout.</p>
+        <summary>Na jaké telefony to je?</summary>
+        <p>TestDog je ke stažení pro iPhone na App Store. Verze pro Android se chystá — níže nám můžeš nechat e‑mail a dáme ti vědět, jakmile vyjde.</p>
       </details>
     </div>
   </div>
@@ -374,23 +403,37 @@
   <div class="wrap">
     <div class="card-cta">
       <img src="dog.png" alt="" style="width:84px;height:84px;border-radius:22px;margin-bottom:18px;box-shadow:0 10px 24px rgba(60,90,55,.25)">
-      <h2 class="sec-title" style="margin-bottom:12px">TestDog je na cestě 🐾</h2>
-      <p class="sec-sub" style="margin-bottom:26px">Pracujeme na vydání pro iPhone i Android. Chceš dát vědět, až to půjde stáhnout? Nech nám na sebe e‑mail.</p>
-      <!-- Formulář odesílá přes Web3Forms (zdarma). E-mail příjemce není ve zdroji stránky,
-           je schovaný za přístupovým klíčem. Cíl (info@testdog.app) se nastavuje v dashboardu
-           Web3Forms, ne tady v kódu – viz NAVOD-nasazeni.md, část C. -->
-      <form class="signup" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="fa2aac92-5e60-4228-835e-0d7c5a8ae578">
-        <input type="hidden" name="subject" value="TestDog – nový zájemce z webu">
-        <input type="hidden" name="from_name" value="TestDog web">
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-        <div class="field-row">
-          <input type="text" name="jmeno" placeholder="Jméno (nepovinné)" autocomplete="name">
-          <input type="email" name="email" placeholder="Tvůj e-mail" required autocomplete="email">
-        </div>
-        <button type="submit" class="btn amber" style="width:100%">✉️ Dejte mi vědět</button>
-        <p class="form-note">Ozveme se jen kvůli spuštění TestDog. Žádný spam, kdykoli se můžeš odhlásit.</p>
-      </form>
+      <h2 class="sec-title" style="margin-bottom:12px">Stáhni si TestDog</h2>
+      <p class="sec-sub" style="margin-bottom:26px">Zahraj si zdarma na iPhonu. Verze pro Android se chystá.</p>
+      <div class="stores" style="margin-bottom:14px">
+        <a class="store-btn" href="https://apps.apple.com/cz/app/testdog/id6784382251" target="_blank" rel="noopener">
+          <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span><span class="st-sub">Stáhnout na</span><span class="st-main">App Store</span></span>
+        </a>
+        <span class="store-btn soon" aria-label="Google Play – už brzy">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3.5v17c0 .6.7 1 1.2.6l14-8.5c.5-.3.5-1 0-1.3l-14-8.5C3.7 2.5 3 2.9 3 3.5z"/></svg>
+          <span><span class="st-sub">Už brzy na</span><span class="st-main">Google Play</span></span>
+        </span>
+      </div>
+
+      <div class="android-notify">
+        <p class="notify-label">Chceš vědět, až vyjde verze pro Android? Nech nám e‑mail.</p>
+        <!-- Formulář odesílá přes Web3Forms (zdarma). E-mail příjemce není ve zdroji stránky,
+             je schovaný za přístupovým klíčem. Cíl (info@testdog.app) se nastavuje v dashboardu
+             Web3Forms, ne tady v kódu – viz NAVOD-nasazeni.md, část C. -->
+        <form class="signup" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="fa2aac92-5e60-4228-835e-0d7c5a8ae578">
+          <input type="hidden" name="subject" value="TestDog – zájem o Android verzi">
+          <input type="hidden" name="from_name" value="TestDog web">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+          <div class="field-row">
+            <input type="text" name="jmeno" placeholder="Jméno (nepovinné)" autocomplete="name">
+            <input type="email" name="email" placeholder="Tvůj e-mail" required autocomplete="email">
+          </div>
+          <button type="submit" class="btn amber" style="width:100%">✉️ Dej mi vědět o Androidu</button>
+          <p class="form-note">Ozveme se jen kvůli spuštění Android verze. Žádný spam, kdykoli se můžeš odhlásit.</p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -399,9 +442,30 @@
   <div class="wrap">
     <div class="brand"><img src="dog.png" alt="" style="width:30px;height:30px;border-radius:9px"> TestDog</div>
     <p>Trenažér zodpovědnosti pro budoucí psí páníčky. Vznikl s láskou k živým zvířatům 🐶</p>
-    <p style="margin-top:8px">© <span id="rok"></span> TestDog • <a href="soukromi/">Zásady ochrany soukromí</a> • <a href="#stahnout">Napiš nám</a></p>
+    <p style="margin-top:8px">© <span id="rok"></span> TestDog • <a href="soukromi/">Zásady ochrany soukromí</a> • <a href="#" class="contact-link">Kontakt</a></p>
   </div>
 </footer>
+
+<dialog id="contactModal" class="modal">
+  <div class="modal-inner">
+    <button class="modal-close" data-close aria-label="Zavřít">×</button>
+    <h3>Napiš nám</h3>
+    <p class="modal-sub">Dotaz, nápad nebo cokoli k TestDog? Ozveme se co nejdřív.</p>
+    <form class="signup contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="fa2aac92-5e60-4228-835e-0d7c5a8ae578">
+      <input type="hidden" name="subject" value="TestDog – zpráva z kontaktního formuláře">
+      <input type="hidden" name="from_name" value="TestDog web">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <div class="field-row">
+        <input type="text" name="jmeno" placeholder="Jméno (nepovinné)" autocomplete="name">
+        <input type="email" name="email" placeholder="Tvůj e-mail" required autocomplete="email">
+      </div>
+      <textarea name="zprava" placeholder="Tvá zpráva" required></textarea>
+      <button type="submit" class="btn amber" style="width:100%">✉️ Odeslat</button>
+      <p class="form-note">Tvůj e-mail použijeme jen k odpovědi. Žádný spam.</p>
+    </form>
+  </div>
+</dialog>
 
 <script>
   document.getElementById('rok').textContent=new Date().getFullYear();
@@ -420,23 +484,36 @@
     }));
   }
 
-  // Formulář „Dejte mi vědět“
-  const f=document.querySelector('.signup');
-  if(f){f.addEventListener('submit',async (e)=>{
-    e.preventDefault();
-    const key=(f.querySelector('[name=access_key]')||{}).value||'';
-    if(key.includes('SEM-VLOZ')||key.length<10){
-      alert('Formulář ještě není propojený s e-mailem. Chybí přístupový klíč Web3Forms – postup je v souboru NAVOD-nasazeni.md (část C).');
-      return;
-    }
-    const btn=f.querySelector('button');const orig=btn.textContent;
-    btn.textContent='Odesílám…';btn.disabled=true;
-    try{
-      const res=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}});
-      if(res.ok){f.innerHTML='<p class="form-ok">Díky! 🐾 Ozveme se, jakmile půjde TestDog stáhnout.</p>';}
-      else{throw new Error();}
-    }catch(_){btn.textContent=orig;btn.disabled=false;alert('Něco se nepovedlo, zkus to prosím za chvíli znovu.');}
-  });}
+  // Odeslání formuláře přes Web3Forms (sdílené pro Android i kontakt)
+  function wireForm(form, okMsg){
+    if(!form) return;
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const key=(form.querySelector('[name=access_key]')||{}).value||'';
+      if(key.includes('SEM-VLOZ')||key.length<10){
+        alert('Formulář ještě není propojený s e-mailem. Chybí přístupový klíč Web3Forms – postup je v souboru NAVOD-nasazeni.md (část C).');
+        return;
+      }
+      const btn=form.querySelector('button');const orig=btn.textContent;
+      btn.textContent='Odesílám…';btn.disabled=true;
+      try{
+        const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+        if(res.ok){form.innerHTML='<p class="form-ok">'+okMsg+'</p>';}
+        else{throw new Error();}
+      }catch(_){btn.textContent=orig;btn.disabled=false;alert('Něco se nepovedlo, zkus to prosím za chvíli znovu.');}
+    });
+  }
+  wireForm(document.querySelector('.android-notify .signup'), 'Díky! 🐾 Dáme ti vědět, jakmile vyjde verze pro Android.');
+  wireForm(document.querySelector('.contact-form'), 'Díky! 🐾 Ozveme se co nejdřív.');
+
+  // Kontaktní okno
+  const contactLink=document.querySelector('.contact-link');
+  const modal=document.getElementById('contactModal');
+  if(contactLink&&modal){
+    contactLink.addEventListener('click',(e)=>{e.preventDefault();modal.showModal();});
+    modal.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>modal.close()));
+    modal.addEventListener('click',(e)=>{ if(e.target===modal) modal.close(); });
+  }
 </script>
 </body>
 </html>
