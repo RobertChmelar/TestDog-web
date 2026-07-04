@@ -68,6 +68,10 @@ article.post blockquote{border-left:4px solid var(--greenSoft);padding:6px 0 6px
 .post-card p{color:var(--inkSoft);font-size:15px;flex:1}
 .post-card .more{color:var(--green);font-weight:700;font-size:14.5px;margin-top:14px}
 
+/* Foto plemene na profilové stránce */
+.breed-photo{margin:0 0 22px;border-radius:18px;overflow:hidden;box-shadow:0 8px 22px rgba(60,90,55,.16)}
+.breed-photo img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+
 /* Slovník – tabulka a profily */
 .breed-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 6px 18px rgba(60,90,55,.10);margin:8px 0 30px;font-size:15px}
 .breed-table th,.breed-table td{padding:12px 14px;text-align:left;border-bottom:1px solid rgba(62,124,79,.12)}

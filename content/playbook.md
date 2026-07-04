@@ -148,6 +148,14 @@ Obsah: povaha, vhodnost k dětem (hvězdičky ★–★★★★★), náročnos
 na co pozor. Použij `article.post` a stejný nav/footer. Přidej CTA box jako v článku.
 Titulek ve stylu: `{{Plemeno}}: povaha, péče a vhodnost k dětem`.
 
+**Foto plemene:** hned za `<p class="post-meta">…</p>` (před `<p class="lead">`) vlož:
+```html
+<figure class="breed-photo"><img src="/slovnik/img/{{slug}}.jpg" alt="{{Plemeno}}" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+```
+Samotný soubor fotky `/slovnik/img/{{slug}}.jpg` doplňuje majitel zvlášť (AI generovaná
+fotka). Když soubor ještě neexistuje, `onerror` místo elegantně skryje – stránka je OK i bez fotky.
+Ve svém shrnutí běhu připomeň, že k novému plemeni je potřeba dodat fotku.
+
 ### Řádek do tabulky v `/slovnik/index.html` (`.breed-table > tbody`)
 ```html
 <tr><td><a href="/slovnik/{{slug}}/">{{Plemeno}}</a></td><td>{{povaha}}</td><td><span class="stars">{{★…}}</span></td><td>{{náročnost}}</td><td>{{velikost}}</td></tr>
