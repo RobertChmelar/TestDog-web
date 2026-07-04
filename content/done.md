@@ -8,8 +8,9 @@ Agent sem po každém běhu připíše nový článek i plemeno (název, URL, da
 - Jaký pes k dětem — /blog/jaky-pes-k-detem/ — 2026-07-04
 - Jste připraveni na psa? Test — /blog/jsme-pripraveni-na-psa-test/ — 2026-07-04
 - Jak naučit dítě zodpovědnosti za psa — /blog/jak-naucit-dite-zodpovednosti-o-psa/ — 2026-07-04
+- Nejlepší psi do bytu — /blog/nejlepsi-psi-do-bytu/ — 2026-07-04
 
 ## Plemena (už uvedená ve slovníku – NEZAKLÁDAT znovu)
 Labrador, Zlatý retrívr, Pudl, Bígl, Kavalír king charles španěl, Bernský salašnický pes,
 Kokršpaněl, Boxer, Bišonek, Border kolie, Německý ovčák, Jack russell teriér, Jezevčík,
-Mops, Čivava, Sibiřský husky, Kříženec z útulku
+Mops, Čivava, Sibiřský husky, Kříženec z útulku, Francouzský buldoček
