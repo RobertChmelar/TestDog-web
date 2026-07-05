@@ -37,6 +37,23 @@
     });
   }
 
+  // Přepínač jazyka (dropdown)
+  document.querySelectorAll('.langsel').forEach(function (ls) {
+    var b = ls.querySelector('.langsel-btn');
+    if (!b) return;
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var o = ls.classList.toggle('open');
+      b.setAttribute('aria-expanded', o);
+    });
+  });
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.langsel.open').forEach(function (ls) {
+      ls.classList.remove('open');
+      var b = ls.querySelector('.langsel-btn'); if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  });
+
   // Kontaktní okno – vytvoříme dynamicky, v jazyce stránky
   function esc(s){return s.replace(/"/g,'&quot;');}
   var modal = document.createElement('dialog');

@@ -19,11 +19,19 @@ nav.site{position:sticky;top:0;z-index:50;background:rgba(232,238,223,.9);backdr
 .nav-links a{color:var(--inkSoft);text-decoration:none;transition:color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--green)}
 .nav-cta{background:var(--green);color:#fff !important;padding:9px 18px;border-radius:99px}
-.nav-right-c{display:flex;align-items:center;gap:18px}
-.lang{display:flex;align-items:center;gap:6px;font-weight:700;font-size:14px}
-.lang a{color:var(--inkSoft);text-decoration:none;cursor:pointer}
-.lang a:hover,.lang a.active{color:var(--green)}
-.lang span{color:rgba(62,124,79,.4)}
+.nav-right-c{display:flex;align-items:center;gap:16px}
+.langsel{position:relative}
+.langsel-btn{display:flex;align-items:center;gap:5px;background:none;border:1px solid rgba(62,124,79,.28);
+  color:var(--inkSoft);font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;letter-spacing:.3px;
+  padding:6px 11px;border-radius:99px;cursor:pointer;line-height:1;transition:color .15s,border-color .15s}
+.langsel-btn:hover{color:var(--green);border-color:var(--green)}
+.langsel-btn .car{font-size:9px;opacity:.7;transition:transform .2s}
+.langsel.open .langsel-btn .car{transform:rotate(180deg)}
+.langsel-menu{position:absolute;top:calc(100% + 6px);right:0;background:var(--card);border-radius:12px;
+  box-shadow:0 10px 24px rgba(60,90,55,.20);border:1px solid rgba(62,124,79,.14);padding:4px;min-width:70px;display:none;z-index:60}
+.langsel.open .langsel-menu{display:block}
+.langsel-menu a{display:block;padding:7px 12px;border-radius:8px;font-weight:700;font-size:13px;color:var(--inkSoft);text-decoration:none}
+.langsel-menu a:hover{background:var(--greenSoft);color:var(--ink)}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;width:44px;height:44px;padding:11px;border-radius:12px}
 .nav-toggle span{display:block;height:2.5px;width:100%;background:var(--ink);border-radius:2px;margin:4.5px 0;transition:transform .25s, opacity .2s}
 .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}

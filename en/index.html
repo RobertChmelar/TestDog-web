@@ -47,11 +47,19 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
   .brand{display:flex;align-items:center;gap:11px;font-size:27px;letter-spacing:-.5px;color:var(--ink);text-decoration:none}
   .brand img{width:38px;height:38px;border-radius:11px;box-shadow:0 4px 10px rgba(60,90,55,.25)}
-  .nav-right{display:flex;align-items:center;gap:18px}
-  .lang{display:flex;align-items:center;gap:6px;font-weight:700;font-size:14px}
-  .lang a{color:var(--inkSoft);text-decoration:none}
-  .lang a:hover,.lang a.active{color:var(--green)}
-  .lang span{color:rgba(62,124,79,.4)}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .langsel{position:relative}
+  .langsel-btn{display:flex;align-items:center;gap:5px;background:none;border:1px solid rgba(62,124,79,.28);
+    color:var(--inkSoft);font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;letter-spacing:.3px;
+    padding:6px 11px;border-radius:99px;cursor:pointer;line-height:1;transition:color .15s,border-color .15s}
+  .langsel-btn:hover{color:var(--green);border-color:var(--green)}
+  .langsel-btn .car{font-size:9px;opacity:.7;transition:transform .2s}
+  .langsel.open .langsel-btn .car{transform:rotate(180deg)}
+  .langsel-menu{position:absolute;top:calc(100% + 6px);right:0;background:var(--card);border-radius:12px;
+    box-shadow:0 10px 24px rgba(60,90,55,.20);border:1px solid rgba(62,124,79,.14);padding:4px;min-width:70px;display:none;z-index:60}
+  .langsel.open .langsel-menu{display:block}
+  .langsel-menu a{display:block;padding:7px 12px;border-radius:8px;font-weight:700;font-size:13px;color:var(--inkSoft);text-decoration:none}
+  .langsel-menu a:hover{background:var(--greenSoft);color:var(--ink)}
   .nav-links{display:flex;gap:26px;align-items:center;font-weight:700;font-size:15px}
   .nav-links a{text-decoration:none;color:var(--inkSoft);transition:color .15s}
   .nav-links a:hover{color:var(--green)}
@@ -201,10 +209,6 @@
   <div class="wrap nav-inner">
     <a href="/en/" class="brand"><img src="/dog.png" alt="TestDog"> TestDog</a>
     <div class="nav-right">
-      <span class="lang"><a href="/">CZ</a><span>·</span><a class="active" aria-current="page">EN</a></span>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
       <div class="nav-links" id="navLinks">
         <a href="#proc">Why TestDog</a>
         <a href="#jak">How to play</a>
@@ -213,6 +217,13 @@
         <a href="/en/dictionary/">Breeds</a>
         <a href="#stahnout" class="btn">Download</a>
       </div>
+      <div class="langsel">
+        <button class="langsel-btn" aria-haspopup="true" aria-expanded="false">EN<span class="car">▾</span></button>
+        <div class="langsel-menu"><a href="/">CZ</a></div>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
@@ -462,6 +473,15 @@
       tog.setAttribute('aria-expanded','false');
     }));
   }
+
+  // Language switcher (dropdown)
+  document.querySelectorAll('.langsel').forEach(function(ls){
+    const b=ls.querySelector('.langsel-btn'); if(!b) return;
+    b.addEventListener('click',function(e){e.stopPropagation();const o=ls.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+  });
+  document.addEventListener('click',function(){
+    document.querySelectorAll('.langsel.open').forEach(function(ls){ls.classList.remove('open');const b=ls.querySelector('.langsel-btn');if(b)b.setAttribute('aria-expanded','false');});
+  });
 
   function wireForm(form, okMsg){
     if(!form) return;

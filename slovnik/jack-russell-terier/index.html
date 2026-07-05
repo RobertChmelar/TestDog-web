@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;700;800;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/content.css?v=3">
+<link rel="stylesheet" href="/assets/content.css?v=4">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-63QT21LDHM"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-63QT21LDHM');</script>
 <script type="application/ld+json">
@@ -29,17 +29,23 @@
 <nav class="site">
   <div class="nav-inner">
     <a href="/" class="brand"><img src="/favicon.png" alt="TestDog"> TestDog</a>
-    <button class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="navLinks">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-links" id="navLinks">
-      <a href="/#proc">Proč TestDog</a>
-      <a href="/#jak">Jak se hraje</a>
-      <a href="/#vyzva">Výzva</a>
-      <a href="/#faq">Časté dotazy</a>
-      <a href="/blog/">Blog</a>
-      <a href="/slovnik/">Slovník ras</a>
-      <a href="/#stahnout" class="nav-cta">Stáhnout</a>
+    <div class="nav-right-c">
+      <div class="nav-links" id="navLinks">
+        <a href="/#proc">Proč TestDog</a>
+        <a href="/#jak">Jak se hraje</a>
+        <a href="/#vyzva">Výzva</a>
+        <a href="/#faq">Časté dotazy</a>
+        <a href="/blog/">Blog</a>
+        <a href="/slovnik/">Slovník ras</a>
+        <a href="/#stahnout" class="nav-cta">Stáhnout</a>
+      </div>
+      <div class="langsel">
+        <button class="langsel-btn" aria-haspopup="true" aria-expanded="false">CZ<span class="car">▾</span></button>
+        <div class="langsel-menu"><a href="/en/dictionary/jack-russell-terrier/">EN</a></div>
+      </div>
+      <button class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
@@ -91,6 +97,6 @@
   </div>
   <p style="margin-top:8px;opacity:.8;font-size:13px">© <span class="rok"></span> TestDog</p>
 </footer>
-<script src="/assets/site.js?v=3"></script>
+<script src="/assets/site.js?v=4"></script>
 </body>
 </html>
