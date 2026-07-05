@@ -26,9 +26,16 @@
 <nav class="site">
   <div class="nav-inner">
     <a href="/" class="brand"><img src="/favicon.png" alt="TestDog"> TestDog</a>
-    <div class="nav-links">
-      <a href="/blog/" class="hide-sm">Blog</a>
-      <a href="/slovnik/" class="hide-sm">Slovník ras</a>
+    <button class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="/#proc">Proč TestDog</a>
+      <a href="/#jak">Jak se hraje</a>
+      <a href="/#vyzva">Výzva</a>
+      <a href="/#faq">Časté dotazy</a>
+      <a href="/blog/">Blog</a>
+      <a href="/slovnik/">Slovník ras</a>
       <a href="/#stahnout" class="nav-cta">Stáhnout</a>
     </div>
   </div>
@@ -86,13 +93,15 @@
 
 <footer class="site">
   <a href="/" class="brand"><img src="/favicon.png" alt="" style="width:28px;height:28px;border-radius:8px"> TestDog</a>
-  <p>Trenažér zodpovědnosti pro budoucí psí páníčky.</p>
+  <p>Trenažér zodpovědnosti pro budoucí psí páníčky. Vznikl s láskou k živým zvířatům 🐶</p>
   <div class="links">
-    <a href="/">Domů</a>
     <a href="/blog/">Blog</a>
     <a href="/slovnik/">Slovník ras</a>
-    <a href="/soukromi/">Soukromí</a>
+    <a href="/soukromi/">Zásady ochrany soukromí</a>
+    <a href="#" class="contact-link">Kontakt</a>
   </div>
+  <p style="margin-top:8px;opacity:.8;font-size:13px">© <span class="rok"></span> TestDog</p>
 </footer>
+<script src="/assets/site.js"></script>
 </body>
 </html>
