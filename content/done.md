@@ -1,6 +1,9 @@
 # Hotový obsah (evidence, ať se nic neopakuje)
 
-Agent sem po každém běhu připíše nový článek i plemeno (název, URL, datum).
+Agent sem po každém běhu připíše nový článek i plemeno (název, obě URL – CZ i EN, datum).
+
+> Pozn.: VŠECHNY níže uvedené články i plemena už existují **dvojjazyčně** (CZ i EN).
+> Nezakládej je znovu v žádném jazyce. Nové položky z backlogu tvoř rovnou CZ + EN.
 
 ## Články
 - Dítě chce psa: co dělat — /blog/dite-chce-psa-co-delat/ — 2026-07-04
