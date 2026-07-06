@@ -58,11 +58,27 @@ Všechny cesty uváděj **kořenově** (`/blog/...`, `/en/...`, `/assets/...`, `
 10. Ověř, že nové stránky vrací HTTP 200 (build GitHub Pages může chvíli trvat; když je
     ještě 404, počkej a zkus znovu).
 
-## Foto plemene
-Anglická stránka plemene používá **stejnou fotku jako česká**: obě odkazují na
-`/slovnik/img/<cz-slug>.jpg`. Samotný soubor fotky dodává majitel (AI generovaná).
-Když ještě neexistuje, `onerror` v `<img>` místo elegantně skryje – stránka je OK i bez ní.
-**Ve svém shrnutí běhu připomeň, že k novému plemeni je potřeba dodat fotku.**
+## Foto plemene (generuj ji sám)
+Česká i anglická stránka plemene sdílí jednu fotku: obě `<img>` odkazují na
+`/slovnik/img/<cz-slug>.jpg`. Fotku **vygeneruj** jako součást běhu:
+
+1. Zavolej nástroj **`generate_image`** (Higgsfield MCP), model `nano_banana_pro`,
+   `aspect_ratio` `3:2`, prompt (nahraď `<Breed>` anglickým názvem plemene):
+   `Photorealistic professional photo of a happy <Breed> dog sitting, looking at camera, soft sage-green studio background, natural soft lighting, high detail, sharp focus, no text, no watermark`
+2. Vrátí se job (`status: pending`). Počkej ~60–90 s, pak zavolej **`show_generations`**
+   (`type: image`) a najdi svůj výsledek podle promptu / job id; vezmi `results.rawUrl` (PNG).
+3. Stáhni PNG a přes Python/PIL převeď na JPG (quality ~82), ulož do
+   `/slovnik/img/<cz-slug>.jpg`. Vzor (spolehlivě funguje):
+   ```python
+   import urllib.request, io; from PIL import Image
+   d=urllib.request.urlopen(RAW_URL, timeout=45).read()
+   Image.open(io.BytesIO(d)).convert("RGB").save("slovnik/img/<cz-slug>.jpg","JPEG",quality=82,optimize=True)
+   ```
+4. Ověř, že soubor vznikl (~40–90 kB), a commitni ho spolu se stránkami.
+
+Pokud `generate_image` v běhu není dostupné nebo selže: stránka je OK i bez fotky
+(`onerror` v `<img>` místo skryje). V tom případě to **jasně zmiň ve shrnutí**, ať fotku
+doplní majitel ručně.
 
 ## Bezpečnostní brzdy
 - Když je backlog prázdný, vygeneruj 5 nových témat (z Google Trends / napovídače),
