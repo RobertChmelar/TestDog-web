@@ -14,64 +14,52 @@
 <link rel="alternate" hreflang="pl" href="https://testdog.app/pl/privacy/">
 <link rel="alternate" hreflang="sk" href="https://testdog.app/sk/privacy/">
 <link rel="alternate" hreflang="x-default" href="https://testdog.app/privacy/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Privacy Policy – TestDog">
+<meta property="og:description" content="TestDog privacy policy. TestDog does not collect or send any personal data.">
+<meta property="og:url" content="https://testdog.app/privacy/">
+<meta property="og:image" content="https://testdog.app/dog.png">
+<meta property="og:locale" content="en_US">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;700;800;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#E8EEDF; --card:#FBFAF3; --green:#3E7C4F; --greenSoft:#C9DEC4;
-    --amber:#E2A33C; --clay:#C75146; --ink:#22372B; --inkSoft:#5C6E60;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
-  h1,h2,.brand{font-family:'Gabarito',system-ui,sans-serif;font-weight:900;line-height:1.15}
-  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
-  a{color:var(--green)}
-  nav{position:sticky;top:0;z-index:50;background:rgba(232,238,223,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(62,124,79,.12)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{display:flex;align-items:center;gap:11px;font-size:25px;letter-spacing:-.5px;color:var(--ink);text-decoration:none}
-  .brand img{width:36px;height:36px;border-radius:11px;box-shadow:0 4px 10px rgba(60,90,55,.25)}
-  .nav-right{display:flex;align-items:center;gap:16px}
-  .lang{font-weight:700;font-size:13.5px}
-  .lang a{text-decoration:none;color:var(--inkSoft)}
-  .lang a.active{color:var(--green)}
-  .lang span{color:rgba(62,124,79,.35);margin:0 3px}
-  .back{font-weight:700;font-size:15px;text-decoration:none;color:var(--inkSoft)}
-  .back:hover{color:var(--green)}
-  main{padding:42px 0 60px}
-  .doc{background:var(--card);border-radius:24px;padding:42px 38px;box-shadow:0 6px 18px rgba(60,90,55,.10);border:1px solid rgba(62,124,79,.08)}
-  h1{font-size:clamp(28px,5vw,38px);margin-bottom:6px}
-  .updated{color:var(--inkSoft);font-size:15px;margin-bottom:24px}
-  h2{font-size:21px;color:var(--green);margin:30px 0 10px}
-  p{margin-bottom:14px;font-size:16.5px}
-  ul{margin:0 0 14px;padding-left:22px}
-  li{margin-bottom:10px;font-size:16.5px}
-  .lead{font-size:17.5px}
-  .highlight{background:var(--greenSoft);border-radius:16px;padding:18px 20px;margin-bottom:18px}
-  .highlight p{margin:0}
-  strong{color:var(--ink)}
-  footer{padding:34px 0;text-align:center;color:var(--inkSoft);font-size:14px;border-top:1px solid rgba(62,124,79,.12)}
-  footer a{color:var(--green);text-decoration:none;font-weight:700}
-  @media(max-width:600px){.back{display:none}}
-</style>
+<link rel="stylesheet" href="/assets/content.css?v=5">
+<style>.highlight{background:var(--greenSoft);border-radius:16px;padding:18px 20px;margin:6px 0 20px}.highlight p{margin:0}</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-63QT21LDHM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-63QT21LDHM');</script>
 </head>
 <body>
-<nav>
-  <div class="wrap nav-inner">
-    <a href="/" class="brand"><img src="/favicon.png" alt="TestDog"> TestDog</a>
-    <div class="nav-right">
-      <span class="lang"><a href="/soukromi/">CZ</a><span>|</span><a class="active" aria-current="page">EN</a><span>|</span><a href="/de/privacy/">DE</a><span>|</span><a href="/es/privacy/">ES</a><span>|</span><a href="/pl/privacy/">PL</a><span>|</span><a href="/sk/privacy/">SK</a></span>
-      <a href="/" class="back">← Back to home</a>
+<nav class="site">
+  <div class="nav-inner">
+    <a href="/en/" class="brand"><img src="/favicon.png" alt="TestDog"> TestDog</a>
+    <div class="nav-right-c">
+      <div class="nav-links" id="navLinks">
+        <a href="/en/#proc">Why TestDog</a>
+        <a href="/en/#jak">How to play</a>
+        <a href="/en/#vyzva">Challenge</a>
+        <a href="/en/#faq">FAQ</a>
+        <a href="/en/blog/">Blog</a>
+        <a href="/en/dictionary/">Breeds</a>
+        <a href="/en/#stahnout" class="nav-cta">Download</a>
+      </div>
+      <div class="langsel">
+        <button class="langsel-btn" aria-haspopup="true" aria-expanded="false">EN<span class="car">▾</span></button>
+        <div class="langsel-menu"><a href="/soukromi/">CZ</a><a href="/de/privacy/">DE</a><a href="/es/privacy/">ES</a><a href="/pl/privacy/">PL</a><a href="/sk/privacy/">SK</a></div>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
 <main>
   <div class="wrap">
-    <article class="doc">
+    <div class="breadcrumb"><a href="/en/">Home</a> › Privacy Policy</div>
+    <article class="post">
       <h1>Privacy Policy – TestDog</h1>
-      <p class="updated">Last updated: June 29, 2026</p>
+      <p class="post-meta">Last updated: June 29, 2026</p>
       <p class="lead">TestDog (the “app”) is a game/simulator for caring for a virtual dog. We care about your privacy — TestDog is designed to work without collecting personal data.</p>
       <h2>In short</h2>
       <div class="highlight"><p>TestDog <strong>does not collect or send any personal data</strong> to our servers. The app has no accounts and no sign-in. Your game progress is stored <strong>only on your phone</strong>.</p></div>
@@ -98,9 +86,17 @@
     </article>
   </div>
 </main>
-<footer>
-  <div class="wrap">© <span id="rok"></span> TestDog • <a href="/">Home</a></div>
+<footer class="site">
+  <a href="/en/" class="brand"><img src="/favicon.png" alt="" style="width:28px;height:28px;border-radius:8px"> TestDog</a>
+  <p>A responsibility trainer for future dog owners. Made with love for living animals 🐶</p>
+  <div class="links">
+    <a href="/en/blog/">Blog</a>
+    <a href="/en/dictionary/">Breeds</a>
+    <a href="/privacy/">Privacy Policy</a>
+    <a href="#" class="contact-link">Contact</a>
+  </div>
+  <p style="margin-top:8px;opacity:.8;font-size:13px">© <span class="rok"></span> TestDog</p>
 </footer>
-<script>document.getElementById('rok').textContent=new Date().getFullYear();</script>
+<script src="/assets/site.js?v=5"></script>
 </body>
 </html>

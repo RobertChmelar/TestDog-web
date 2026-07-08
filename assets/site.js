@@ -1,23 +1,63 @@
-/* Sdílené chování obsahových stránek TestDog: hamburger menu + kontaktní okno (CZ/EN) */
+/* Sdílené chování obsahových stránek TestDog: hamburger menu + kontaktní okno (CZ/EN/DE/ES/PL/SK) */
 (function () {
-  var EN = (document.documentElement.lang || 'cs').toLowerCase().indexOf('en') === 0;
-  var T = EN ? {
-    write: 'Write to us',
-    sub: 'A question, idea, or anything about TestDog? We\'ll get back to you soon.',
-    name: 'Name (optional)', email: 'Your email', msg: 'Your message', send: '✉️ Send',
-    note: 'We\'ll only use your email to reply. No spam.',
-    subject: 'TestDog — contact form message (EN)',
-    sending: 'Sending…', ok: 'Thanks! 🐾 We\'ll get back to you soon.',
-    err: 'Something went wrong, please try again in a moment.'
-  } : {
-    write: 'Napiš nám',
-    sub: 'Dotaz, nápad nebo cokoli k TestDog? Ozveme se co nejdřív.',
-    name: 'Jméno (nepovinné)', email: 'Tvůj e-mail', msg: 'Tvá zpráva', send: '✉️ Odeslat',
-    note: 'Tvůj e-mail použijeme jen k odpovědi. Žádný spam.',
-    subject: 'TestDog – zpráva z kontaktního formuláře',
-    sending: 'Odesílám…', ok: 'Díky! 🐾 Ozveme se co nejdřív.',
-    err: 'Něco se nepovedlo, zkus to prosím za chvíli znovu.'
+  var LANGS = {
+    en: {
+      write: 'Write to us',
+      sub: 'A question, idea, or anything about TestDog? We\'ll get back to you soon.',
+      name: 'Name (optional)', email: 'Your email', msg: 'Your message', send: '✉️ Send',
+      note: 'We\'ll only use your email to reply. No spam.',
+      subject: 'TestDog — contact form message (EN)',
+      sending: 'Sending…', ok: 'Thanks! 🐾 We\'ll get back to you soon.',
+      err: 'Something went wrong, please try again in a moment.'
+    },
+    de: {
+      write: 'Schreib uns',
+      sub: 'Eine Frage, eine Idee oder etwas zu TestDog? Wir melden uns bald.',
+      name: 'Name (optional)', email: 'Deine E-Mail', msg: 'Deine Nachricht', send: '✉️ Senden',
+      note: 'Wir nutzen deine E-Mail nur für die Antwort. Kein Spam.',
+      subject: 'TestDog — contact form message (DE)',
+      sending: 'Wird gesendet…', ok: 'Danke! 🐾 Wir melden uns bald.',
+      err: 'Etwas ist schiefgegangen, bitte versuch es gleich noch einmal.'
+    },
+    es: {
+      write: 'Escríbenos',
+      sub: '¿Una pregunta, una idea o cualquier cosa sobre TestDog? Te responderemos pronto.',
+      name: 'Nombre (opcional)', email: 'Tu correo electrónico', msg: 'Tu mensaje', send: '✉️ Enviar',
+      note: 'Solo usaremos tu correo para responderte. Nada de spam.',
+      subject: 'TestDog — contact form message (ES)',
+      sending: 'Enviando…', ok: '¡Gracias! 🐾 Te responderemos pronto.',
+      err: 'Algo ha salido mal; inténtalo de nuevo en un momento.'
+    },
+    pl: {
+      write: 'Napisz do nas',
+      sub: 'Pytanie, pomysł albo cokolwiek w sprawie TestDog? Odezwiemy się wkrótce.',
+      name: 'Imię (opcjonalnie)', email: 'Twój e-mail', msg: 'Twoja wiadomość', send: '✉️ Wyślij',
+      note: 'Twojego e-maila użyjemy tylko do odpowiedzi. Zero spamu.',
+      subject: 'TestDog — contact form message (PL)',
+      sending: 'Wysyłanie…', ok: 'Dzięki! 🐾 Odezwiemy się wkrótce.',
+      err: 'Coś poszło nie tak, spróbuj proszę za chwilę.'
+    },
+    sk: {
+      write: 'Napíš nám',
+      sub: 'Otázka, nápad alebo čokoľvek k TestDogu? Ozveme sa čo najskôr.',
+      name: 'Meno (nepovinné)', email: 'Tvoj e-mail', msg: 'Tvoja správa', send: '✉️ Odoslať',
+      note: 'Tvoj e-mail použijeme len na odpoveď. Žiadny spam.',
+      subject: 'TestDog — contact form message (SK)',
+      sending: 'Odosielam…', ok: 'Vďaka! 🐾 Ozveme sa čo najskôr.',
+      err: 'Niečo sa nepodarilo, skús to prosím o chvíľu znova.'
+    },
+    cs: {
+      write: 'Napiš nám',
+      sub: 'Dotaz, nápad nebo cokoli k TestDog? Ozveme se co nejdřív.',
+      name: 'Jméno (nepovinné)', email: 'Tvůj e-mail', msg: 'Tvá zpráva', send: '✉️ Odeslat',
+      note: 'Tvůj e-mail použijeme jen k odpovědi. Žádný spam.',
+      subject: 'TestDog – zpráva z kontaktního formuláře',
+      sending: 'Odesílám…', ok: 'Díky! 🐾 Ozveme se co nejdřív.',
+      err: 'Něco se nepovedlo, zkus to prosím za chvíli znovu.'
+    }
   };
+  var lang = (document.documentElement.lang || 'cs').toLowerCase().slice(0, 2);
+  var T = LANGS[lang] || LANGS.cs;
 
   document.querySelectorAll('.rok').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 

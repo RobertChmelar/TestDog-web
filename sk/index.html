@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TestDog — trenažér zodpovednosti pre budúcich psíčkarov</title>
+<meta name="description" content="TestDog je mobilná hra, v ktorej sa staráš o virtuálneho psa v reálnom čase. Kŕmenie, skutočné prechádzky merané krokomerom, hranie a upratovanie. Vydrž 3, 30 alebo 90 dní a získaj certifikát „Viem sa postarať o psa“.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="TestDog — dokáž, že sa vieš postarať o psa">
+<meta property="og:description" content="Virtuálny pes v reálnom čase. Kŕmenie, skutočné prechádzky s krokomerom, hranie a upratovanie. Zvládneš výzvu a získaš certifikát?">
+<meta property="og:image" content="https://testdog.app/dog.png">
+<meta property="og:url" content="https://testdog.app/sk/">
+<meta property="og:locale" content="sk_SK">
+<meta property="og:locale:alternate" content="cs_CZ">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;700;800;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="canonical" href="https://testdog.app/sk/">
+<link rel="alternate" hreflang="cs" href="https://testdog.app/">
+<link rel="alternate" hreflang="en" href="https://testdog.app/en/">
+<link rel="alternate" hreflang="de" href="https://testdog.app/de/">
+<link rel="alternate" hreflang="es" href="https://testdog.app/es/">
+<link rel="alternate" hreflang="pl" href="https://testdog.app/pl/">
+<link rel="alternate" hreflang="sk" href="https://testdog.app/sk/">
+<link rel="alternate" hreflang="x-default" href="https://testdog.app/">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-63QT21LDHM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-63QT21LDHM');</script>
+
+<style>
+  :root{
+    --bg:#E8EEDF; --card:#FBFAF3; --green:#3E7C4F; --greenSoft:#C9DEC4;
+    --amber:#E2A33C; --clay:#C75146; --ink:#22372B; --inkSoft:#5C6E60;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.brand{font-family:'Gabarito',system-ui,sans-serif;font-weight:900;line-height:1.1}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(232,238,223,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(62,124,79,.12)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:11px;font-size:27px;letter-spacing:-.5px;color:var(--ink);text-decoration:none}
+  .brand img{width:38px;height:38px;border-radius:11px;box-shadow:0 4px 10px rgba(60,90,55,.25)}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .langsel{position:relative}
+  .langsel-btn{display:flex;align-items:center;gap:5px;background:none;border:1px solid rgba(62,124,79,.28);
+    color:var(--inkSoft);font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;letter-spacing:.3px;
+    padding:6px 11px;border-radius:99px;cursor:pointer;line-height:1;transition:color .15s,border-color .15s}
+  .langsel-btn:hover{color:var(--green);border-color:var(--green)}
+  .langsel-btn .car{font-size:9px;opacity:.7;transition:transform .2s}
+  .langsel.open .langsel-btn .car{transform:rotate(180deg)}
+  .langsel-menu{position:absolute;top:calc(100% + 6px);right:0;background:var(--card);border-radius:12px;
+    box-shadow:0 10px 24px rgba(60,90,55,.20);border:1px solid rgba(62,124,79,.14);padding:4px;min-width:70px;display:none;z-index:60}
+  .langsel.open .langsel-menu{display:block}
+  .langsel-menu a{display:block;padding:7px 12px;border-radius:8px;font-weight:700;font-size:13px;color:var(--inkSoft);text-decoration:none}
+  .langsel-menu a:hover{background:var(--greenSoft);color:var(--ink)}
+  .nav-links{display:flex;gap:26px;align-items:center;font-weight:700;font-size:15px}
+  .nav-links a{text-decoration:none;color:var(--inkSoft);transition:color .15s}
+  .nav-links a:hover{color:var(--green)}
+  .nav-links a.btn,.nav-links a.btn:hover{color:#fff}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;width:44px;height:44px;padding:11px;border-radius:12px}
+  .nav-toggle span{display:block;height:2.5px;width:100%;background:var(--ink);border-radius:2px;margin:4.5px 0;transition:transform .25s, opacity .2s}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .btn{display:inline-block;background:var(--green);color:#F4F8EE;text-decoration:none;font-family:'Gabarito';font-weight:800;
+    padding:13px 24px;border-radius:99px;box-shadow:0 8px 22px rgba(62,124,79,.28);transition:transform .12s, box-shadow .12s;border:none;cursor:pointer;font-size:16px}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(62,124,79,.34)}
+  .btn.amber{background:var(--amber);box-shadow:0 8px 22px rgba(226,163,60,.30)}
+  @media(max-width:640px){
+    .nav-toggle{display:block}
+    .nav-links{position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+      background:var(--bg);padding:6px 22px 16px;border-bottom:1px solid rgba(62,124,79,.12);
+      box-shadow:0 14px 26px rgba(60,90,55,.14);display:none}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:14px 4px;font-size:17px;border-bottom:1px solid rgba(62,124,79,.10)}
+    .nav-links a.btn{margin-top:14px;text-align:center;border-bottom:none}
+  }
+
+  header.hero{padding:64px 0 40px;text-align:center;position:relative;overflow:hidden}
+  .hero-dog{width:230px;max-width:62%;margin:0 auto 22px}
+  .hero-dog-img{display:block;width:100%;height:auto}
+  .hero h1{font-size:clamp(34px,6vw,56px);max-width:760px;margin:0 auto 18px}
+  .hero h1 .hl{color:var(--green)}
+  .hero p.lead{font-size:clamp(17px,2.4vw,21px);color:var(--inkSoft);max-width:600px;margin:0 auto 30px}
+  .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+  .hero-note{font-size:14px;color:var(--inkSoft);opacity:.85}
+  .stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center}
+  .store-btn{display:inline-flex;align-items:center;gap:11px;background:#111;color:#fff;text-decoration:none;
+    padding:11px 22px;border-radius:15px;box-shadow:0 8px 22px rgba(0,0,0,.20);transition:transform .12s, box-shadow .12s}
+  .store-btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.26)}
+  .store-btn svg{width:26px;height:26px;flex-shrink:0}
+  .store-btn .st-sub{font-size:11px;line-height:1.1;opacity:.9;display:block}
+  .store-btn .st-main{font-family:'Gabarito';font-weight:800;font-size:18px;line-height:1.15;display:block}
+  .store-btn.soon{background:var(--greenSoft);color:var(--inkSoft);box-shadow:none;cursor:default}
+  .store-btn.soon svg{opacity:.6}
+  .pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .pill{background:var(--greenSoft);color:var(--ink);font-weight:700;font-size:14px;padding:8px 16px;border-radius:99px}
+
+  section{padding:56px 0}
+  .sec-title{text-align:center;font-size:clamp(26px,4vw,38px);margin-bottom:10px}
+  .sec-sub{text-align:center;color:var(--inkSoft);max-width:580px;margin:0 auto 42px;font-size:17px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .card{background:var(--card);border-radius:24px;padding:26px;box-shadow:0 6px 18px rgba(60,90,55,.10);border:1px solid rgba(62,124,79,.08)}
+  .card .ico{font-size:34px;display:block;margin-bottom:12px}
+  .card h3{font-size:20px;margin-bottom:8px;color:var(--ink)}
+  .card p{color:var(--inkSoft);font-size:15.5px}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;counter-reset:step}
+  .step{background:var(--card);border-radius:24px;padding:26px;position:relative;box-shadow:0 6px 18px rgba(60,90,55,.10)}
+  .step::before{counter-increment:step;content:counter(step);position:absolute;top:-16px;left:24px;width:40px;height:40px;
+    background:var(--green);color:#F4F8EE;border-radius:99px;display:flex;align-items:center;justify-content:center;
+    font-family:'Gabarito';font-weight:900;font-size:19px;box-shadow:0 6px 14px rgba(62,124,79,.30)}
+  .step h3{margin:12px 0 8px;font-size:19px}
+  .step p{color:var(--inkSoft);font-size:15px}
+  .cert{background:linear-gradient(180deg,#5E8C57,#527E4C);color:#F4F8EE;border-radius:32px;padding:46px 44px;text-align:left;box-shadow:0 16px 40px rgba(60,90,55,.30)}
+  .cert-inner{display:flex;align-items:center;gap:42px}
+  .cert-text{flex:1;min-width:0}
+  .cert h2{color:#F4F8EE;font-size:clamp(26px,4vw,36px);margin-bottom:14px}
+  .cert-text p{margin:0 0 12px;opacity:.92;font-size:17px;max-width:540px}
+  .cert-img{flex-shrink:0;width:200px;max-width:32%;margin:0}
+  .cert-img img{width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 16px 38px rgba(0,0,0,.32);transform:rotate(1.5deg)}
+  .gold{color:#FAD56B}
+  @media(max-width:760px){
+    .cert{padding:34px 26px;text-align:center}
+    .cert-inner{flex-direction:column;gap:26px}
+    .cert-img{order:-1;width:160px;max-width:52%}
+    .cert-img img{transform:none}
+    .cert-text p{margin-left:auto;margin-right:auto}
+  }
+  .frame{position:relative;width:230px;background:linear-gradient(135deg,#46484b,#1f2022 38%,#2c2d30 70%,#454649);
+    border-radius:34px;padding:7px;transition:transform .4s ease, filter .4s ease;filter:drop-shadow(0 26px 34px rgba(20,30,24,.42))}
+  .frame img{display:block;width:100%;border-radius:28px}
+  .frame .island{position:absolute;top:13px;left:50%;transform:translateX(-50%);width:26%;max-width:56px;height:15px;background:#08080a;border-radius:11px;z-index:3}
+  .shots-section{padding:30px 0 6px}
+  .shots-trio{display:flex;justify-content:center;align-items:center;perspective:2000px}
+  .shots-trio .frame{width:196px;margin:0 -18px;transform:rotateY(20deg) rotateZ(-4deg);transition:transform .4s ease, filter .4s ease}
+  .shots-trio .frame:nth-child(1){z-index:1}
+  .shots-trio .frame:nth-child(2){transform:rotateY(20deg) rotateZ(-4deg) translateY(-20px) scale(1.18);z-index:3}
+  .shots-trio .frame:nth-child(3){z-index:2}
+  .shots-trio .frame:hover{z-index:5}
+  .shots-trio .frame:nth-child(1):hover{transform:rotateY(10deg) rotateZ(-2deg) scale(1.05)}
+  .shots-trio .frame:nth-child(2):hover{transform:rotateY(12deg) rotateZ(-2deg) translateY(-26px) scale(1.22)}
+  .shots-trio .frame:nth-child(3):hover{transform:rotateY(10deg) rotateZ(-2deg) scale(1.05)}
+  @media(max-width:600px){
+    .shots-trio .frame{width:30vw;margin:0 -2.4vw;border-radius:3.8vw;padding:0.8vw;transform:rotateY(18deg) rotateZ(-3deg)}
+    .shots-trio .frame img{border-radius:3vw}
+    .shots-trio .frame .island{top:1.3vw;width:24%;height:1.5vw;border-radius:3vw}
+    .shots-trio .frame:nth-child(2){transform:rotateY(18deg) rotateZ(-3deg) translateY(-12px) scale(1.16)}
+  }
+  .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+  .tier{background:var(--card);border-radius:24px;padding:28px 24px;text-align:center;box-shadow:0 6px 18px rgba(60,90,55,.10);border:1px solid rgba(62,124,79,.08)}
+  .tier .d{font-family:'Gabarito';font-weight:900;font-size:40px;color:var(--green)}
+  .tier .u{color:var(--inkSoft);font-weight:700;margin-bottom:10px}
+  .tier .desc{font-size:14.5px;color:var(--inkSoft)}
+  .tier .lives{margin-top:12px;font-size:18px}
+  @media(max-width:640px){
+    .grid .card{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;padding:20px 22px}
+    .grid .card .ico{margin-bottom:0;font-size:30px}
+    .grid .card h3{margin-bottom:0}
+    .grid .card p{grid-column:1 / -1;margin-top:8px}
+    .tier{padding:20px 24px}
+    .tier .d{display:inline-block;font-size:34px;vertical-align:baseline}
+    .tier .u{display:inline-block;margin:0 0 0 8px;vertical-align:baseline}
+  }
+  .faq{max-width:720px;margin:0 auto}
+  details{background:var(--card);border-radius:18px;padding:4px 22px;margin-bottom:12px;box-shadow:0 4px 12px rgba(60,90,55,.08)}
+  summary{font-family:'Gabarito';font-weight:800;font-size:17px;padding:16px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+';color:var(--green);font-size:24px;font-weight:700}
+  details[open] summary::after{content:'–'}
+  details p{padding:0 0 18px;color:var(--inkSoft);font-size:15.5px}
+  .final{text-align:center}
+  .final .card-cta{background:var(--card);border-radius:32px;padding:48px 30px;box-shadow:0 10px 30px rgba(60,90,55,.14)}
+  .signup{max-width:440px;margin:0 auto}
+  .field-row{display:flex;gap:10px;margin-bottom:12px}
+  .signup input[type=text],.signup input[type=email]{flex:1;min-width:0;font-family:'Nunito',sans-serif;font-size:16px;
+    padding:13px 16px;border:1.5px solid var(--greenSoft);border-radius:14px;background:#fff;color:var(--ink);outline:none;transition:border-color .15s}
+  .signup input:focus{border-color:var(--green)}
+  .signup input::placeholder{color:#9aa89b}
+  .hp{position:absolute;left:-9999px;opacity:0}
+  .form-note{font-size:13px;color:var(--inkSoft);margin-top:12px}
+  .form-ok{font-family:'Gabarito';font-weight:800;font-size:19px;color:var(--green);padding:14px 0}
+  .android-notify{border-top:1px solid rgba(62,124,79,.15);margin-top:26px;padding-top:24px;max-width:440px;margin-left:auto;margin-right:auto}
+  .notify-label{font-family:'Gabarito';font-weight:800;font-size:16px;color:var(--ink);margin-bottom:14px}
+  dialog.modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);margin:0;border:none;border-radius:24px;padding:0;width:92%;max-width:440px;max-height:90vh;overflow:auto;background:var(--card);box-shadow:0 30px 70px rgba(34,55,43,.35)}
+  dialog.modal::backdrop{background:rgba(34,55,43,.45);backdrop-filter:blur(2px)}
+  .modal-inner{position:relative;padding:34px 30px 30px}
+  .modal-inner h3{font-family:'Gabarito';font-weight:900;font-size:23px;color:var(--ink);margin-bottom:6px}
+  .modal-sub{color:var(--inkSoft);font-size:15px;margin-bottom:18px}
+  .modal-close{position:absolute;top:14px;right:16px;width:34px;height:34px;border:none;border-radius:99px;background:var(--greenSoft);color:var(--ink);font-size:20px;font-weight:800;line-height:1;cursor:pointer}
+  .contact-form textarea{width:100%;font-family:'Nunito',sans-serif;font-size:16px;padding:12px 16px;border:1.5px solid var(--greenSoft);border-radius:14px;background:#fff;color:var(--ink);outline:none;resize:vertical;min-height:100px;margin-bottom:12px;transition:border-color .15s}
+  .contact-form textarea:focus{border-color:var(--green)}
+  .contact-form textarea::placeholder{color:#9aa89b}
+  @media(max-width:480px){.field-row{flex-direction:column}}
+  footer{padding:40px 0;text-align:center;color:var(--inkSoft);font-size:14px;border-top:1px solid rgba(62,124,79,.12)}
+  footer .brand{justify-content:center;margin-bottom:12px;font-size:19px}
+  footer a{color:var(--green);text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="/sk/" class="brand"><img src="/dog.png" alt="TestDog"> TestDog</a>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="#proc">Prečo TestDog</a>
+        <a href="#jak">Ako sa hrá</a>
+        <a href="#vyzva">Výzva</a>
+        <a href="#faq">FAQ</a>
+        <a href="/sk/blog/">Blog</a>
+        <a href="/sk/dictionary/">Plemená</a>
+        <a href="#stahnout" class="btn">Stiahnuť</a>
+      </div>
+      <div class="langsel">
+        <button class="langsel-btn" aria-haspopup="true" aria-expanded="false">SK<span class="car">▾</span></button>
+        <div class="langsel-menu"><a href="/">CS</a><a href="/en/">EN</a><a href="/de/">DE</a><a href="/es/">ES</a><a href="/pl/">PL</a></div>
+      </div>
+      <button class="nav-toggle" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-dog">
+      <img src="/hero-dog.svg" alt="Šťastný pes z appky TestDog" class="hero-dog-img">
+    </div>
+    <h1>Dokáž, že sa vieš o psa <span class="hl">postarať</span>.</h1>
+    <p class="lead">TestDog je trenažér zodpovednosti. Staraj sa o virtuálneho psa v <b>reálnom čase</b> — so skutočnými oknami kŕmenia a skutočnými krokmi z krokomera telefónu. Žiadne podvádzanie, žiadne pretáčanie času.</p>
+    <div class="hero-cta">
+      <a class="store-btn" href="https://apps.apple.com/app/id6784382251" target="_blank" rel="noopener">
+        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        <span><span class="st-sub">Stiahnuť z</span><span class="st-main">App Store</span></span>
+      </a>
+      <a href="#jak" class="btn">Ako to funguje</a>
+    </div>
+    <p class="hero-note">Zadarmo pre iPhone • Verzia pre Android už čoskoro</p>
+    <div class="pills">
+      <span class="pill">⏱️ Reálny čas</span>
+      <span class="pill">👟 Skutočné kroky</span>
+      <span class="pill">🏅 Certifikát na konci</span>
+    </div>
+  </div>
+</header>
+
+<section id="proc">
+  <div class="wrap">
+    <h2 class="sec-title">Prečo TestDog?</h2>
+    <p class="sec-sub">Pes je záväzok na roky. S TestDogom si vyskúšaš každodennú rutinu skôr, než si domov prinesieš skutočného psa.</p>
+    <div class="steps">
+      <div class="step">
+        <h3>Reálny čas, žiadne podvádzanie</h3>
+        <p>Tvoj pes žije v reálnom čase. Nedá sa pretočiť dopredu — tak ako pri skutočnom psovi musíš byť pri ňom, keď ťa potrebuje.</p>
+      </div>
+      <div class="step">
+        <h3>Skutočné kroky</h3>
+        <p>Prechádzky sa počítajú krokomerom tvojho telefónu. Naozaj musíš vstať a ísť von, presne ako so skutočným psom.</p>
+      </div>
+      <div class="step">
+        <h3>Dôkaz pre celú rodinu</h3>
+        <p>Skvelé pre deti aj dospelých, ktorí uvažujú o psovi. Certifikát ukáže, že rutinu zvládaš.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shots-section">
+  <div class="wrap">
+    <div class="shots-trio">
+      <div class="frame"><span class="island"></span><img src="/sk-screen-setup.png" alt="Obrazovka nastavenia TestDog — meno psa, dĺžka výzvy a cieľ krokov" loading="lazy"></div>
+      <div class="frame"><span class="island"></span><img src="/sk-screen-home.png" alt="Hlavná herná obrazovka TestDog — sýtosť, nálada a denné okná" loading="lazy"></div>
+      <div class="frame"><span class="island"></span><img src="/sk-screen-walk.jpg" alt="Obrazovka prechádzky TestDog — počítanie skutočných krokov z krokomera" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section id="jak">
+  <div class="wrap">
+    <h2 class="sec-title">Ako sa hrá</h2>
+    <p class="sec-sub">Cieľom je udržať psa šťastného a zdravého počas celej výzvy. Beží v reálnom čase — pes ťa potrebuje, aj keď je appka zavretá.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="ico">🍖</span>
+        <h3>Kŕmenie dvakrát denne</h3>
+        <p>Raňajky (6–10) a večera (17–22). Keď okno zmeškáš, pes vyhladne. Notifikácie ti pripomenú, kedy je čas kŕmiť.</p>
+      </div>
+      <div class="card">
+        <span class="ico">🦮</span>
+        <h3>Skutočné prechádzky</h3>
+        <p>Ranná a večerná prechádzka sú povinné. Splníš ju tým, že prejdeš <b>1 500 skutočných krokov</b> — appka ich číta z krokomera telefónu. Nevyvenčený pes narobí doma neporiadok a môže dokonca ujsť.</p>
+      </div>
+      <div class="card">
+        <span class="ico">🧹</span>
+        <h3>Upratovanie</h3>
+        <p>Keď pes niečo vyvedie, uprac po ňom. Dovtedy sú prechádzky zablokované. Upratanie mu zdvihne náladu.</p>
+      </div>
+      <div class="card">
+        <span class="ico">🎾</span>
+        <h3>Hranie a nálada</h3>
+        <p>Hranie a prechádzky zdvíhajú psovi náladu. Keď klesne na nulu, upadne do depresie a štrajkuje — vtedy pomôže už len hranie.</p>
+      </div>
+      <div class="card">
+        <span class="ico">❤️</span>
+        <h3>Životy</h3>
+        <p>Vážne zanedbanie (útek, kolaps od hladu alebo dlhá depresia) stojí život. Keď sa minú, výzva sa končí — ale môžeš začať odznova.</p>
+      </div>
+      <div class="card">
+        <span class="ico">🏅</span>
+        <h3>Pečiatky a certifikát</h3>
+        <p>Za každý bezchybný, zdravý deň získaš pečiatku. Vydržíš celú výzvu? Získaš certifikát „Viem sa postarať o psa“.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vyzva" style="padding-top:20px">
+  <div class="wrap">
+    <h2 class="sec-title">Vyber si svoju výzvu</h2>
+    <p class="sec-sub">Kratšia výzva je na vyskúšanie, dlhšia je väčším dôkazom pripravenosti — a dáva viac životov.</p>
+    <div class="tiers">
+      <div class="tier">
+        <div class="d">3</div>
+        <div class="u">dni</div>
+        <div class="desc">Na vyskúšanie, ako to celé funguje.</div>
+        <div class="lives">❤️</div>
+      </div>
+      <div class="tier">
+        <div class="d">30</div>
+        <div class="u">dní</div>
+        <div class="desc">Mesiac skutočnej rutiny kŕmenia a venčenia.</div>
+        <div class="lives">❤️❤️❤️</div>
+      </div>
+      <div class="tier">
+        <div class="d">90</div>
+        <div class="u">dní</div>
+        <div class="desc">Veľký dôkaz pripravenosti na adopciu.</div>
+        <div class="lives">❤️❤️❤️</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cert">
+      <div class="cert-inner">
+        <div class="cert-text">
+          <h2>Certifikát „Viem sa postarať o psa“</h2>
+          <p>Certifikát sa udeľuje za <b>stav tvojho psa</b>. Kontrola prebieha o polnoci. Nestačí len odslúžiť dni — psovi sa musí naozaj dariť.</p>
+          <p>A keď to celé zvládneš <span class="gold">bez jedinej platenej záchrany</span>, tvoj certifikát bude <span class="gold">zlatý</span>. Hotový certifikát si môžeš uložiť a zdieľať.</p>
+        </div>
+        <figure class="cert-img">
+          <img src="/sk-certifikat.jpg" alt="Ukážkový certifikát „Viem sa postarať o psa“ z appky TestDog" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2 class="sec-title">FAQ</h2>
+    <div class="faq" style="margin-top:34px">
+      <details open>
+        <summary>Ako sa merajú prechádzky?</summary>
+        <p>Appka používa krokomer telefónu. Prechádzku splníš tak, že v časovom okne prejdeš cieľový počet krokov (1 000, 1 500 alebo 2 000 podľa zvolenej náročnosti). Takže naozaj musíš von, nielen stlačiť tlačidlo.</p>
+      </details>
+      <details>
+        <summary>Čo sa stane, keď appku zavriem?</summary>
+        <p>Nič sa nezastaví. Hra beží v reálnom čase na pozadí — pes vyhladne a stále potrebuje venčiť. Keď appku znova otvoríš, stav sa dobehne. Notifikácie ti pripomenú kŕmenie aj prechádzky.</p>
+      </details>
+      <details>
+        <summary>Čo ak psa zanedbám?</summary>
+        <p>Vážne zanedbanie stojí život (útek, kolaps od hladu, dlhá depresia). Keď sa životy minú, výzva sa končí — ale pokojne začni odznova. Dlhšie výzvy dávajú viac životov.</p>
+      </details>
+      <details>
+        <summary>Koľko to stojí?</summary>
+        <p>Samotná hra je zadarmo. Platíš len za voliteľné vylepšenia a záchrany (napríklad keď to nestíhaš), ktoré na poctivé dokončenie výzvy vôbec nepotrebuješ. A pozor: použitím platenej záchrany prídeš o zlatý certifikát.</p>
+      </details>
+      <details>
+        <summary>Pre aké telefóny je?</summary>
+        <p>TestDog je dostupný pre iPhone v App Store. Verzia pre Android sa chystá — nechaj dole svoj e-mail a dáme ti vedieť, keď vyjde.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="stahnout" class="final">
+  <div class="wrap">
+    <div class="card-cta">
+      <img src="/dog.png" alt="" style="width:84px;height:84px;border-radius:22px;margin-bottom:18px;box-shadow:0 10px 24px rgba(60,90,55,.25)">
+      <h2 class="sec-title" style="margin-bottom:12px">Stiahni si TestDog</h2>
+      <p class="sec-sub" style="margin-bottom:26px">Hraj zadarmo na iPhone. Verzia pre Android sa chystá.</p>
+      <div class="stores" style="margin-bottom:14px">
+        <a class="store-btn" href="https://apps.apple.com/app/id6784382251" target="_blank" rel="noopener">
+          <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span><span class="st-sub">Stiahnuť z</span><span class="st-main">App Store</span></span>
+        </a>
+        <span class="store-btn soon" aria-label="Google Play — už čoskoro">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3.5v17c0 .6.7 1 1.2.6l14-8.5c.5-.3.5-1 0-1.3l-14-8.5C3.7 2.5 3 2.9 3 3.5z"/></svg>
+          <span><span class="st-sub">Čoskoro na</span><span class="st-main">Google Play</span></span>
+        </span>
+      </div>
+
+      <div class="android-notify">
+        <p class="notify-label">Chceš vedieť, kedy vyjde verzia pre Android? Nechaj nám svoj e-mail.</p>
+        <form class="signup" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="fa2aac92-5e60-4228-835e-0d7c5a8ae578">
+          <input type="hidden" name="subject" value="TestDog — Android version interest (SK)">
+          <input type="hidden" name="from_name" value="TestDog web">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+          <div class="field-row">
+            <input type="text" name="name" placeholder="Meno (nepovinné)" autocomplete="name">
+            <input type="email" name="email" placeholder="Tvoj e-mail" required autocomplete="email">
+          </div>
+          <button type="submit" class="btn amber" style="width:100%">✉️ Daj mi vedieť o Androide</button>
+          <p class="form-note">Ozveme sa len kvôli vydaniu pre Android. Žiadny spam, odhlásiš sa kedykoľvek.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><img src="/dog.png" alt="" style="width:30px;height:30px;border-radius:9px"> TestDog</div>
+    <p>Trenažér zodpovednosti pre budúcich psíčkarov. Vznikol s láskou k živým zvieratám 🐶</p>
+    <p style="margin-top:8px">© <span id="rok"></span> TestDog • <a href="/sk/blog/">Blog</a> • <a href="/sk/dictionary/">Plemená</a> • <a href="/sk/privacy/">Súkromie</a> • <a href="#" class="contact-link">Contact</a></p>
+  </div>
+</footer>
+
+<dialog id="contactModal" class="modal">
+  <div class="modal-inner">
+    <button class="modal-close" data-close aria-label="Zavrieť">×</button>
+    <h3>Napíš nám</h3>
+    <p class="modal-sub">Otázka, nápad alebo čokoľvek k TestDogu? Ozveme sa čo najskôr.</p>
+    <form class="signup contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="fa2aac92-5e60-4228-835e-0d7c5a8ae578">
+      <input type="hidden" name="subject" value="TestDog — contact form message (SK)">
+      <input type="hidden" name="from_name" value="TestDog web">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <div class="field-row">
+        <input type="text" name="name" placeholder="Meno (nepovinné)" autocomplete="name">
+        <input type="email" name="email" placeholder="Tvoj e-mail" required autocomplete="email">
+      </div>
+      <textarea name="message" placeholder="Tvoja správa" required></textarea>
+      <button type="submit" class="btn amber" style="width:100%">✉️ Odoslať</button>
+      <p class="form-note">Tvoj e-mail použijeme len na odpoveď. Žiadny spam.</p>
+    </form>
+  </div>
+</dialog>
+
+<script>
+  document.getElementById('rok').textContent=new Date().getFullYear();
+
+  const tog=document.querySelector('.nav-toggle');
+  const links=document.getElementById('navLinks');
+  if(tog&&links){
+    tog.addEventListener('click',()=>{
+      const open=links.classList.toggle('open');
+      tog.setAttribute('aria-expanded',open);
+    });
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+      links.classList.remove('open');
+      tog.setAttribute('aria-expanded','false');
+    }));
+  }
+
+  // Language switcher (dropdown)
+  document.querySelectorAll('.langsel').forEach(function(ls){
+    const b=ls.querySelector('.langsel-btn'); if(!b) return;
+    b.addEventListener('click',function(e){e.stopPropagation();const o=ls.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+  });
+  document.addEventListener('click',function(){
+    document.querySelectorAll('.langsel.open').forEach(function(ls){ls.classList.remove('open');const b=ls.querySelector('.langsel-btn');if(b)b.setAttribute('aria-expanded','false');});
+  });
+
+  function wireForm(form, okMsg){
+    if(!form) return;
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const key=(form.querySelector('[name=access_key]')||{}).value||'';
+      if(key.length<10){ alert('Formulár ešte nie je prepojený s e-mailom.'); return; }
+      const btn=form.querySelector('button');const orig=btn.textContent;
+      btn.textContent='Odosielam…';btn.disabled=true;
+      try{
+        const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+        if(res.ok){form.innerHTML='<p class="form-ok">'+okMsg+'</p>';}
+        else{throw new Error();}
+      }catch(_){btn.textContent=orig;btn.disabled=false;alert('Niečo sa nepodarilo, skús to prosím o chvíľu znova.');}
+    });
+  }
+  wireForm(document.querySelector('.android-notify .signup'), 'Vďaka! 🐾 Dáme ti vedieť, keď vyjde verzia pre Android.');
+  wireForm(document.querySelector('.contact-form'), 'Vďaka! 🐾 Ozveme sa čo najskôr.');
+
+  const contactLink=document.querySelector('.contact-link');
+  const modal=document.getElementById('contactModal');
+  if(contactLink&&modal){
+    contactLink.addEventListener('click',(e)=>{e.preventDefault();modal.showModal();});
+    modal.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>modal.close()));
+    modal.addEventListener('click',(e)=>{ if(e.target===modal) modal.close(); });
+  }
+</script>
+</body>
+</html>
