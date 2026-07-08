@@ -13,6 +13,10 @@
   <url><loc>https://testdog.app/slovnik/francouzsky-buldocek/</loc><lastmod>2026-07-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://testdog.app/soukromi/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://testdog.app/privacy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://testdog.app/de/privacy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://testdog.app/es/privacy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://testdog.app/pl/privacy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://testdog.app/sk/privacy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://testdog.app/slovnik/labrador/</loc><lastmod>2026-07-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://testdog.app/slovnik/zlaty-retrivr/</loc><lastmod>2026-07-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://testdog.app/slovnik/pudl/</loc><lastmod>2026-07-04</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
