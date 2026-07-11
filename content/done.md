@@ -13,9 +13,11 @@ Agent sem po každém běhu připíše nový článek i plemeno (název, obě UR
 - Jak naučit dítě zodpovědnosti za psa — /blog/jak-naucit-dite-zodpovednosti-o-psa/ — 2026-07-04
 - Nejlepší psi do bytu — /blog/nejlepsi-psi-do-bytu/ — 2026-07-04
 - Psi, kteří nelínají – plemena pro alergiky — /blog/psi-kteri-nelinaji/ + /en/blog/hypoallergenic-dogs/ — 2026-07-06
+- Jak vybrat štěně z vrhu — /blog/jak-vybrat-stene-z-vrhu/ + /en/blog/how-to-choose-a-puppy/ (+ DE/ES/PL/SK) — 2026-07-11
 
 ## Plemena (už uvedená ve slovníku – NEZAKLÁDAT znovu)
 Labrador, Zlatý retrívr, Pudl, Bígl, Kavalír king charles španěl, Bernský salašnický pes,
 Kokršpaněl, Boxer, Bišonek, Border kolie, Německý ovčák, Jack russell teriér, Jezevčík,
 Mops, Čivava, Sibiřský husky, Kříženec z útulku, Francouzský buldoček,
 Yorkshire teriér — /slovnik/yorkshire-terier/ + /en/dictionary/yorkshire-terrier/ — 2026-07-06
+Německý špic (Pomeranian) — /slovnik/nemecky-spic/ + /en/dictionary/pomeranian/ (+ DE/ES/PL/SK) — 2026-07-11
