@@ -143,3 +143,6 @@ footer.site .links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;m
 footer.site .social{display:flex;gap:18px;justify-content:center;margin-top:16px}
 footer.site .social a{color:var(--inkSoft);display:inline-flex;transition:color .15s,transform .12s}
 footer.site .social a:hover{color:var(--green);transform:translateY(-2px)}
+footer.site .brand-row{display:flex;align-items:center;justify-content:center;gap:12px 22px;flex-wrap:wrap;margin-bottom:12px}
+footer.site .brand-row .brand{margin-bottom:0}
+footer.site .brand-row .social{margin-top:0}
