@@ -140,3 +140,6 @@ footer.site{padding:36px 0;text-align:center;color:var(--inkSoft);font-size:14px
 footer.site .brand{justify-content:center;margin-bottom:12px;font-size:20px}
 footer.site a{color:var(--green);text-decoration:none;font-weight:700}
 footer.site .links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+footer.site .social{display:flex;gap:18px;justify-content:center;margin-top:16px}
+footer.site .social a{color:var(--inkSoft);display:inline-flex;transition:color .15s,transform .12s}
+footer.site .social a:hover{color:var(--green);transform:translateY(-2px)}
