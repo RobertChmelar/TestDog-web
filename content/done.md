@@ -23,3 +23,5 @@ Mops, Čivava, Sibiřský husky, Kříženec z útulku, Francouzský buldoček,
 Yorkshire teriér — /slovnik/yorkshire-terier/ + /en/dictionary/yorkshire-terrier/ — 2026-07-06
 Německý špic (Pomeranian) — /slovnik/nemecky-spic/ + /en/dictionary/pomeranian/ (+ DE/ES/PL/SK) — 2026-07-11
 Australský ovčák (Australian Shepherd) — /slovnik/australsky-ovcar/ + /en/dictionary/australian-shepherd/ (+ DE/ES/PL/SK) — 2026-07-13
+- První den se štěnětem doma — /blog/prvni-den-se-stenetem-doma/ + /en/blog/first-day-with-a-puppy/ (+ DE/ES/PL/SK) — 2026-07-20
+Shih tzu — /slovnik/shih-tzu/ + /en/dictionary/shih-tzu/ (+ DE/ES/PL/SK) — 2026-07-20
