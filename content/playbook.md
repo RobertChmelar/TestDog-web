@@ -22,6 +22,14 @@ jazykovou složkou v cestě). Pak vše commitni a pushni; GitHub Pages nasadí w
 - **Nikdy neduplikuj** téma ani plemeno, které už je v `content/done.md`.
 - Neuváděj vymyšlená čísla jako fakta; ceny/statistiky formuluj jako orientační.
 - Gramatika a diakritika bezchybně ve všech jazycích. Gendrově neutrální tón.
+- **Pozor na cizí znaky:** nikdy nenech v textu proklouznout písmeno z jiné abecedy
+  (typicky cyrilice – např. „krokom**ером**" místo „krokom**erom**", nebo „**само**"
+  místo „samo"). Vypadá to jako překlep a kazí to dojem. Piš důsledně v abecedě
+  daného jazyka.
+- **Pomlčky (– / —) používej střídmě.** Můžou být, ale jen tam, kde dávají v daném
+  jazyce opravdu smysl (např. odsazení popisku za tučným výrazem v odrážce, číselný
+  rozsah „2–3 hodiny"). V běžných větách je nahrazuj čárkou, tečkou nebo dvojtečkou –
+  ať text nevypadá „strojově". Nesázej pomlčku tam, kde stačí přirozená interpunkce.
 - **Žádný jazyk není doslovný překlad.** Obsah přelož věrně, ale **titulek a meta popis
   přizpůsob výrazům, které se v daném jazyce reálně hledají**. Oslovení čtenáře:
   EN you, DE du (ne Sie), ES tú, PL/SK/CZ tykání.
@@ -63,11 +71,21 @@ Všechny cesty uváděj **kořenově** (`/blog/...`, `/de/...`, `/assets/...`, `
    - odkazovaný řádek plemene do tabulky `.breed-table > tbody` ve **všech 6**
      slovníkových indexech (`/slovnik/index.html`, `/en/dictionary/index.html`, `/de/…`,
      `/es/…`, `/pl/…`, `/sk/…`), texty buněk v jazyce indexu.
-7. **Sitemap** – přidej všech **12 nových URL** do `/sitemap.xml` (s dnešním `lastmod`).
-8. **Evidence** – zapiš do `content/done.md` téma i plemeno (název, CZ+EN URL, datum,
+7. **Korektura (NEVYNECHÁVAT) – přečti každý text, než ho pustíš ven.** Projdi všech
+   12 stránek a u každé zkontroluj:
+   - **gramatiku, diakritiku a smysl vět** v daném jazyce – čti text tak, jako by ho
+     četl rodilý mluvčí; oprav patvary, kostrbaté nebo nesmyslné věty a překlepy;
+   - **žádné cizí znaky** (cyrilice apod. – viz sekce Kvalita);
+   - **pomlčky** – zbytečné nahraď přirozenou interpunkcí (viz sekce Kvalita);
+   - konzistentní tykání/vykání dle jazyka a lokalizované ceny/názvy.
+   Zvláštní pozor na CZ a SK – tady patvary a cizí znaky nejvíc bijí do očí. Když
+   něco skřípe, oprav to hned; do commitu jde jen text, který by rodilý mluvčí
+   podepsal.
+8. **Sitemap** – přidej všech **12 nových URL** do `/sitemap.xml` (s dnešním `lastmod`).
+9. **Evidence** – zapiš do `content/done.md` téma i plemeno (název, CZ+EN URL, datum,
    poznámka „6 jazyků“).
-9. `git add -A && git commit -m "Obsah: <článek> + plemeno <plemeno> (6 jazyků)" && git push origin HEAD`.
-10. Ověř, že nové stránky vrací HTTP 200 (build GitHub Pages může chvíli trvat; když je
+10. `git add -A && git commit -m "Obsah: <článek> + plemeno <plemeno> (6 jazyků)" && git push origin HEAD`.
+11. Ověř, že nové stránky vrací HTTP 200 (build GitHub Pages může chvíli trvat; když je
     ještě 404, počkej a zkus znovu). Stačí ověřit namátkou CZ + 2 další jazyky.
 
 ## Foto plemene (generuj ji sám)
