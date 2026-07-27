@@ -71,7 +71,15 @@ Všechny cesty uváděj **kořenově** (`/blog/...`, `/de/...`, `/assets/...`, `
    - odkazovaný řádek plemene do tabulky `.breed-table > tbody` ve **všech 6**
      slovníkových indexech (`/slovnik/index.html`, `/en/dictionary/index.html`, `/de/…`,
      `/es/…`, `/pl/…`, `/sk/…`), texty buněk v jazyce indexu.
-7. **Korektura (NEVYNECHÁVAT) – přečti každý text, než ho pustíš ven.** Projdi všech
+7. **Vnitřní prolinkování v textu (interní linkbuilding – NEVYNECHÁVAT).** V novém
+   článku i v novém profilu plemene projdi text a každé **jméno plemene, které má
+   vlastní stránku ve slovníku daného jazyka**, obal odkazem na tu stránku
+   (`/slovnik/<cz-slug>/` resp. `/xx/dictionary/<en-slug>/`). Než odkaz vytvoříš,
+   ověř (`ls slovnik/` / `ls xx/dictionary/`), že stránka v tom konkrétním jazyce
+   reálně existuje – ne všechna plemena musí mít stránky ve všech 6 jazycích.
+   Každé plemeno linkuj jen při **prvním výskytu** v textu, ne opakovaně. Plemena
+   bez vlastní stránky nech jako běžný text.
+8. **Korektura (NEVYNECHÁVAT) – přečti každý text, než ho pustíš ven.** Projdi všech
    12 stránek a u každé zkontroluj:
    - **gramatiku, diakritiku a smysl vět** v daném jazyce – čti text tak, jako by ho
      četl rodilý mluvčí; oprav patvary, kostrbaté nebo nesmyslné věty a překlepy;
@@ -81,11 +89,18 @@ Všechny cesty uváděj **kořenově** (`/blog/...`, `/de/...`, `/assets/...`, `
    Zvláštní pozor na CZ a SK – tady patvary a cizí znaky nejvíc bijí do očí. Když
    něco skřípe, oprav to hned; do commitu jde jen text, který by rodilý mluvčí
    podepsal.
-8. **Sitemap** – přidej všech **12 nových URL** do `/sitemap.xml` (s dnešním `lastmod`).
-9. **Evidence** – zapiš do `content/done.md` téma i plemeno (název, CZ+EN URL, datum,
-   poznámka „6 jazyků“).
-10. `git add -A && git commit -m "Obsah: <článek> + plemeno <plemeno> (6 jazyků)" && git push origin HEAD`.
-11. Ověř, že nové stránky vrací HTTP 200 (build GitHub Pages může chvíli trvat; když je
+9. **Sitemap** – přidej všech **12 nových URL** do `/sitemap.xml` (s dnešním `lastmod`).
+10. **Evidence** – zapiš do `content/done.md` téma i plemeno (název, CZ+EN URL, datum,
+    poznámka „6 jazyků“).
+11. **Zpětné prolinkování starších článků na nové plemeno (NEVYNECHÁVAT).** Nové
+    plemeno se může jmenovat i v článcích napsaných v předchozích běžích. Ve všech
+    6 jazycích prohledej existující články
+    (`grep -rl "<jméno plemene>" blog/ en/blog/ de/blog/ es/blog/ pl/blog/ sk/blog/`,
+    včetně místních tvarů jména plemene v daném jazyce) a každý holý text s tímto
+    plemenem obal odkazem na nově vytvořenou stránku plemene v odpovídajícím
+    jazyce. Uprav jen samotný odkaz, ne okolní text.
+12. `git add -A && git commit -m "Obsah: <článek> + plemeno <plemeno> (6 jazyků)" && git push origin HEAD`.
+13. Ověř, že nové stránky vrací HTTP 200 (build GitHub Pages může chvíli trvat; když je
     ještě 404, počkej a zkus znovu). Stačí ověřit namátkou CZ + 2 další jazyky.
 
 ## Foto plemene (generuj ji sám)
