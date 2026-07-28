@@ -40,7 +40,7 @@ jazykovou složkou v cestě). Pak vše commitni a pushni; GitHub Pages nasadí w
 
 ## ŠABLONY = existující stránky (kopíruj a uprav)
 Nevkládej HTML z hlavy – **otevři si existující hotovou stránku STEJNÉHO jazyka a zkopíruj
-její strukturu** (hlavičku vč. GA/fontů/`content.css?v=5`/`site.js?v=5`, `nav` s přeloženými
+její strukturu** (hlavičku vč. GA/fontů/`content.css?v=6`/`site.js?v=6`, `nav` s přeloženými
 položkami menu, `footer`). Měň jen obsah, `<title>`, meta, `canonical`, slug, `hreflang`
 a cíle přepínače jazyků.
 - **článek** ← vzor `/blog/nejlepsi-psi-do-bytu/`, `/en/blog/how-much-does-a-dog-cost/`,
@@ -130,7 +130,7 @@ doplní majitel ručně.
   zapiš je nahoru do backlogu a teprve pak pokračuj.
 - Když si nejsi jistý faktem, formuluj opatrně nebo téma přeskoč.
 - Nikdy neměň herní logiku appky ani ceny bez podkladu; tohle je jen web.
-- Cache-busting: `content.css` a `site.js` odkazuj s `?v=5` (stejně jako vzorové stránky).
+- Cache-busting: `content.css` a `site.js` odkazuj s `?v=6` (stejně jako vzorové stránky).
   Kdyby někdo v budoucnu ta sdílená CSS/JS měnil, verzi je potřeba zvednout napříč
   obsahovými stránkami – ale běžný obsahový běh je needituje.
 - Kdyby ti na jeden běh 12 stránek nevycházelo (např. limit času), dokonči VŽDY celé

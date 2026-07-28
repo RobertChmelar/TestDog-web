@@ -54,6 +54,51 @@
       subject: 'TestDog – zpráva z kontaktního formuláře',
       sending: 'Odesílám…', ok: 'Díky! 🐾 Ozveme se co nejdřív.',
       err: 'Něco se nepovedlo, zkus to prosím za chvíli znovu.'
+    },
+    fr: {
+      write: 'Écris-nous',
+      sub: 'Une question, une idée ou autre chose sur TestDog ? On te répond vite.',
+      name: 'Nom (facultatif)', email: 'Ton e-mail', msg: 'Ton message', send: '✉️ Envoyer',
+      note: 'On utilisera ton e-mail uniquement pour te répondre. Pas de spam.',
+      subject: 'TestDog — contact form message (FR)',
+      sending: 'Envoi…', ok: 'Merci ! 🐾 On te répond très vite.',
+      err: 'Une erreur est survenue, réessaie dans un instant.'
+    },
+    pt: {
+      write: 'Fale com a gente',
+      sub: 'Uma dúvida, ideia ou qualquer coisa sobre o TestDog? A gente responde logo.',
+      name: 'Nome (opcional)', email: 'Seu e-mail', msg: 'Sua mensagem', send: '✉️ Enviar',
+      note: 'Usaremos seu e-mail só para responder. Sem spam.',
+      subject: 'TestDog — contact form message (PT)',
+      sending: 'Enviando…', ok: 'Obrigado! 🐾 A gente responde logo.',
+      err: 'Algo deu errado, tente de novo em instantes.'
+    },
+    it: {
+      write: 'Scrivici',
+      sub: 'Una domanda, un’idea o qualcosa su TestDog? Ti rispondiamo presto.',
+      name: 'Nome (facoltativo)', email: 'La tua e-mail', msg: 'Il tuo messaggio', send: '✉️ Invia',
+      note: 'Useremo la tua e-mail solo per risponderti. Niente spam.',
+      subject: 'TestDog — contact form message (IT)',
+      sending: 'Invio…', ok: 'Grazie! 🐾 Ti rispondiamo presto.',
+      err: 'Qualcosa è andato storto, riprova tra un momento.'
+    },
+    nl: {
+      write: 'Schrijf ons',
+      sub: 'Een vraag, idee of iets anders over TestDog? We reageren snel.',
+      name: 'Naam (optioneel)', email: 'Je e-mail', msg: 'Je bericht', send: '✉️ Versturen',
+      note: 'We gebruiken je e-mail alleen om te antwoorden. Geen spam.',
+      subject: 'TestDog — contact form message (NL)',
+      sending: 'Versturen…', ok: 'Bedankt! 🐾 We reageren snel.',
+      err: 'Er ging iets mis, probeer het zo meteen opnieuw.'
+    },
+    sv: {
+      write: 'Skriv till oss',
+      sub: 'En fråga, idé eller något annat om TestDog? Vi svarar snart.',
+      name: 'Namn (valfritt)', email: 'Din e-post', msg: 'Ditt meddelande', send: '✉️ Skicka',
+      note: 'Vi använder din e-post bara för att svara. Ingen spam.',
+      subject: 'TestDog — contact form message (SV)',
+      sending: 'Skickar…', ok: 'Tack! 🐾 Vi svarar snart.',
+      err: 'Något gick fel, försök igen om en stund.'
     }
   };
   var lang = (document.documentElement.lang || 'cs').toLowerCase().slice(0, 2);
