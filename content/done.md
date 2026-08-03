@@ -27,3 +27,5 @@ Australský ovčák (Australian Shepherd) — /slovnik/australsky-ovcar/ + /en/d
 Shih tzu — /slovnik/shih-tzu/ + /en/dictionary/shih-tzu/ (+ DE/ES/PL/SK) — 2026-07-20
 - Kolik pohybu potřebuje pes denně — /blog/kolik-pohybu-potrebuje-pes-denne/ + /en/blog/how-much-exercise-does-a-dog-need/ (+ DE/ES/PL/SK) — 2026-07-27
 Maltézský psík (Maltese) — /slovnik/maltezsky-psik/ + /en/dictionary/maltese/ (+ DE/ES/PL/SK) — 2026-07-27
+- Jak často venčit psa a jak dlouho — /blog/jak-casto-vencit-psa/ + /en/blog/how-often-to-walk-a-dog/ (11 jazyků) — 2026-08-03
+Maďarský ohař / vizsla — /slovnik/madarsky-ohar-vizsla/ + /en/dictionary/vizsla/ (11 jazyků, s fotkou) — 2026-08-03
