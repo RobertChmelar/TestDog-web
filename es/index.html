@@ -99,6 +99,14 @@
   .hero h1 .hl{color:var(--green)}
   .hero p.lead{font-size:clamp(17px,2.4vw,21px);color:var(--inkSoft);max-width:600px;margin:0 auto 30px}
   .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+  /* Obchody drží pohromadě na jednom řádku; 'jak to funguje' padá pod ně. */
+  .hero-stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;max-width:100%}
+  @media(max-width:430px){
+    .hero-cta{gap:12px}
+    .hero-stores{gap:10px}
+    .hero-stores .store-btn{padding:11px 16px}
+    .hero-stores .store-btn .st-main{font-size:17px}
+  }
   .hero-note{font-size:14px;color:var(--inkSoft);opacity:.85}
   .stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center}
   .store-btn{display:inline-flex;align-items:center;gap:11px;background:#111;color:#fff;text-decoration:none;
@@ -107,8 +115,6 @@
   .store-btn svg{width:26px;height:26px;flex-shrink:0}
   .store-btn .st-sub{font-size:11px;line-height:1.1;opacity:.9;display:block}
   .store-btn .st-main{font-family:'Gabarito';font-weight:800;font-size:18px;line-height:1.15;display:block}
-  .store-btn.soon{background:var(--greenSoft);color:var(--inkSoft);box-shadow:none;cursor:default}
-  .store-btn.soon svg{opacity:.6}
   .pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:34px}
   .pill{background:var(--greenSoft);color:var(--ink);font-weight:700;font-size:14px;padding:8px 16px;border-radius:99px}
 
@@ -250,14 +256,16 @@
     <h1>Demuestra que sabes <span class="hl">cuidar</span> de un perro.</h1>
     <p class="lead">TestDog es un entrenador de responsabilidad. Cuida de un perro virtual en <b>tiempo real</b>: ventanas de comida reales y pasos reales del podómetro de tu móvil. Sin trampas y sin adelantar el tiempo.</p>
     <div class="hero-cta">
-      <a class="store-btn" href="https://apps.apple.com/app/id6784382251" target="_blank" rel="noopener">
-        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-        <span><span class="st-sub">Consíguelo en el</span><span class="st-main">App Store</span></span>
-      </a>
-      <a class="store-btn" href="https://play.google.com/store/apps/details?id=cz.emarketer.testdog&amp;hl=es" target="_blank" rel="noopener">
-        <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00D3FF" d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z"/><path fill="#00F076" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z"/><path fill="#FFCE00" d="M472.2 225.6l-58.9-34.1-65.7 65.5 65.7 65.5 60.1-34.1c18-14.3 18-46.5-1.2-62.8z"/><path fill="#FF3A44" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
-        <span><span class="st-sub">Disponible en</span><span class="st-main">Google Play</span></span>
-      </a>
+      <div class="hero-stores">
+        <a class="store-btn" href="https://apps.apple.com/app/id6784382251" target="_blank" rel="noopener">
+          <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span><span class="st-sub">Consíguelo en el</span><span class="st-main">App Store</span></span>
+        </a>
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=cz.emarketer.testdog&amp;hl=es" target="_blank" rel="noopener">
+          <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00D3FF" d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z"/><path fill="#00F076" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z"/><path fill="#FFCE00" d="M472.2 225.6l-58.9-34.1-65.7 65.5 65.7 65.5 60.1-34.1c18-14.3 18-46.5-1.2-62.8z"/><path fill="#FF3A44" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+          <span><span class="st-sub">Disponible en</span><span class="st-main">Google Play</span></span>
+        </a>
+      </div>
       <a href="#jak" class="btn">Cómo funciona</a>
     </div>
     <p class="hero-note">Gratis para iPhone y Android</p>
