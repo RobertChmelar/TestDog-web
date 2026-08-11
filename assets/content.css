@@ -104,6 +104,7 @@ article.post blockquote{border-left:4px solid var(--greenSoft);padding:6px 0 6px
 .store-btn svg{width:24px;height:24px;flex-shrink:0}
 .store-btn .st-sub{font-size:11px;line-height:1.1;opacity:.9;display:block}
 .store-btn .st-main{font-family:'Gabarito';font-weight:800;font-size:17px;line-height:1.15;display:block}
+.cta-stores{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
 /* Blog rozcestník */
 .page-head{text-align:center;margin-bottom:36px}

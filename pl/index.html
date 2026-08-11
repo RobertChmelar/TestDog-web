@@ -195,8 +195,6 @@
   .hp{position:absolute;left:-9999px;opacity:0}
   .form-note{font-size:13px;color:var(--inkSoft);margin-top:12px}
   .form-ok{font-family:'Gabarito';font-weight:800;font-size:19px;color:var(--green);padding:14px 0}
-  .android-notify{border-top:1px solid rgba(62,124,79,.15);margin-top:26px;padding-top:24px;max-width:440px;margin-left:auto;margin-right:auto}
-  .notify-label{font-family:'Gabarito';font-weight:800;font-size:16px;color:var(--ink);margin-bottom:14px}
   dialog.modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);margin:0;border:none;border-radius:24px;padding:0;width:92%;max-width:440px;max-height:90vh;overflow:auto;background:var(--card);box-shadow:0 30px 70px rgba(34,55,43,.35)}
   dialog.modal::backdrop{background:rgba(34,55,43,.45);backdrop-filter:blur(2px)}
   .modal-inner{position:relative;padding:34px 30px 30px}
@@ -256,9 +254,13 @@
         <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
         <span><span class="st-sub">Pobierz z</span><span class="st-main">App Store</span></span>
       </a>
+      <a class="store-btn" href="https://play.google.com/store/apps/details?id=cz.emarketer.testdog&amp;hl=pl" target="_blank" rel="noopener">
+        <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00D3FF" d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z"/><path fill="#00F076" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z"/><path fill="#FFCE00" d="M472.2 225.6l-58.9-34.1-65.7 65.5 65.7 65.5 60.1-34.1c18-14.3 18-46.5-1.2-62.8z"/><path fill="#FF3A44" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+        <span><span class="st-sub">Pobierz z</span><span class="st-main">Google Play</span></span>
+      </a>
       <a href="#jak" class="btn">Jak to działa</a>
     </div>
-    <p class="hero-note">Za darmo na iPhone’a • Wersja na Androida już wkrótce</p>
+    <p class="hero-note">Za darmo na iPhone’a i Androida</p>
     <div class="pills">
       <span class="pill">⏱️ Czas rzeczywisty</span>
       <span class="pill">👟 Prawdziwe kroki</span>
@@ -403,7 +405,7 @@
       </details>
       <details>
         <summary>Na jakie telefony jest dostępny?</summary>
-        <p>TestDog jest dostępny na iPhone’a w App Store. Wersja na Androida jest w drodze — zostaw poniżej swój e-mail, a damy znać, gdy się pojawi.</p>
+        <p>TestDog jest dostępny za darmo na iPhone’a w App Store i na Androida w Google Play.</p>
       </details>
     </div>
   </div>
@@ -414,32 +416,16 @@
     <div class="card-cta">
       <img src="/dog.png" alt="" style="width:84px;height:84px;border-radius:22px;margin-bottom:18px;box-shadow:0 10px 24px rgba(60,90,55,.25)">
       <h2 class="sec-title" style="margin-bottom:12px">Pobierz TestDog</h2>
-      <p class="sec-sub" style="margin-bottom:26px">Graj za darmo na iPhonie. Wersja na Androida jest w drodze.</p>
-      <div class="stores" style="margin-bottom:14px">
+      <p class="sec-sub" style="margin-bottom:26px">Graj za darmo na iPhonie i Androidzie.</p>
+      <div class="stores">
         <a class="store-btn" href="https://apps.apple.com/app/id6784382251" target="_blank" rel="noopener">
           <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
           <span><span class="st-sub">Pobierz z</span><span class="st-main">App Store</span></span>
         </a>
-        <span class="store-btn soon" aria-label="Google Play — już wkrótce">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3.5v17c0 .6.7 1 1.2.6l14-8.5c.5-.3.5-1 0-1.3l-14-8.5C3.7 2.5 3 2.9 3 3.5z"/></svg>
-          <span><span class="st-sub">Wkrótce w</span><span class="st-main">Google Play</span></span>
-        </span>
-      </div>
-
-      <div class="android-notify">
-        <p class="notify-label">Chcesz wiedzieć, kiedy wyjdzie wersja na Androida? Zostaw swój e-mail.</p>
-        <form class="signup" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="fa2aac92-5e60-4228-835e-0d7c5a8ae578">
-          <input type="hidden" name="subject" value="TestDog — Android version interest (PL)">
-          <input type="hidden" name="from_name" value="TestDog web">
-          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-          <div class="field-row">
-            <input type="text" name="name" placeholder="Imię (opcjonalnie)" autocomplete="name">
-            <input type="email" name="email" placeholder="Twój e-mail" required autocomplete="email">
-          </div>
-          <button type="submit" class="btn amber" style="width:100%">✉️ Powiadom mnie o Androidzie</button>
-          <p class="form-note">Odezwiemy się tylko w sprawie premiery na Androida. Zero spamu, możesz się wypisać w każdej chwili.</p>
-        </form>
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=cz.emarketer.testdog&amp;hl=pl" target="_blank" rel="noopener">
+          <svg viewBox="0 0 512 512" aria-hidden="true"><path fill="#00D3FF" d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z"/><path fill="#00F076" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z"/><path fill="#FFCE00" d="M472.2 225.6l-58.9-34.1-65.7 65.5 65.7 65.5 60.1-34.1c18-14.3 18-46.5-1.2-62.8z"/><path fill="#FF3A44" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+          <span><span class="st-sub">Pobierz z</span><span class="st-main">Google Play</span></span>
+        </a>
       </div>
     </div>
   </div>
@@ -522,7 +508,6 @@
       }catch(_){btn.textContent=orig;btn.disabled=false;alert('Coś poszło nie tak, spróbuj proszę za chwilę.');}
     });
   }
-  wireForm(document.querySelector('.android-notify .signup'), 'Dzięki! 🐾 Damy znać, gdy wersja na Androida będzie gotowa.');
   wireForm(document.querySelector('.contact-form'), 'Dzięki! 🐾 Odezwiemy się wkrótce.');
 
   const contactLink=document.querySelector('.contact-link');

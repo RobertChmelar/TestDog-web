@@ -48,7 +48,7 @@ složkou v cestě). Pak vše commitni a pushni; GitHub Pages nasadí web automat
 
 ## ŠABLONY = existující stránky (kopíruj a uprav)
 Nevkládej HTML z hlavy – **otevři si existující hotovou stránku STEJNÉHO jazyka a zkopíruj
-její strukturu** (hlavičku vč. GA/fontů/`content.css?v=6`/`site.js?v=6`, `nav` s přeloženými
+její strukturu** (hlavičku vč. GA/fontů/`content.css?v=7`/`site.js?v=7`, `nav` s přeloženými
 položkami menu, `footer` vč. brand-row s odkazy na sociální sítě). Měň jen obsah, `<title>`,
 meta, `canonical`, slug, `hreflang` a cíle přepínače jazyků.
 - **článek** ← vzor `/blog/nejlepsi-psi-do-bytu/`, `/en/blog/how-much-does-a-dog-cost/`,
@@ -57,6 +57,16 @@ meta, `canonical`, slug, `hreflang` a cíle přepínače jazyků.
   a analogicky `/de/…`, `/es/…`, `/pl/…`, `/sk/…`, `/fr/…`, `/pt/…`, `/it/…`, `/nl/…`, `/sv/…`
 
 Všechny cesty uváděj **kořenově** (`/blog/...`, `/fr/...`, `/assets/...`, `/favicon.png`).
+
+**Odkazy na obchody (aplikace je na iOS i Androidu).** CTA box v článku i v profilu plemene
+obsahuje **dvě** tlačítka obalená v `<div class="cta-stores">` – App Store a Google Play.
+Zkopíruj je ze vzorové stránky téhož jazyka a nic v nich neměň; klíčové je, aby odkaz
+mířil na správnou jazykovou verzi obchodu:
+- **App Store:** čeština `https://apps.apple.com/cz/app/testdog/id6784382251`,
+  všechny ostatní jazyky `https://apps.apple.com/app/id6784382251` (bez země).
+- **Google Play:** `https://play.google.com/store/apps/details?id=cz.emarketer.testdog&amp;hl=<kód>`,
+  kde `<kód>` je: cs, en, de, es, pl, sk, fr, **pt-BR**, it, nl, sv.
+Nikdy nepiš, že Android teprve „chystáme“ – aplikace je venku na obou platformách.
 
 ## Postup jednoho běhu (krok za krokem)
 1. Přečti `content/backlog.md` a `content/done.md`.
@@ -135,7 +145,7 @@ doplní majitel ručně.
   zapiš je nahoru do backlogu a teprve pak pokračuj.
 - Když si nejsi jistý faktem, formuluj opatrně nebo téma přeskoč.
 - Nikdy neměň herní logiku appky ani ceny bez podkladu; tohle je jen web.
-- Cache-busting: `content.css` a `site.js` odkazuj s `?v=6` (stejně jako vzorové stránky).
+- Cache-busting: `content.css` a `site.js` odkazuj s `?v=7` (stejně jako vzorové stránky).
   Kdyby někdo v budoucnu ta sdílená CSS/JS měnil, verzi je potřeba zvednout napříč
   obsahovými stránkami – ale běžný obsahový běh je needituje.
 - Kdyby ti na jeden běh 22 stránek nevycházelo (např. limit času), dokonči VŽDY celé
