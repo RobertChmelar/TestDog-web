@@ -29,3 +29,5 @@ Shih tzu — /slovnik/shih-tzu/ + /en/dictionary/shih-tzu/ (+ DE/ES/PL/SK) — 2
 Maltézský psík (Maltese) — /slovnik/maltezsky-psik/ + /en/dictionary/maltese/ (+ DE/ES/PL/SK) — 2026-07-27
 - Jak často venčit psa a jak dlouho — /blog/jak-casto-vencit-psa/ + /en/blog/how-often-to-walk-a-dog/ (11 jazyků) — 2026-08-03
 Maďarský ohař / vizsla — /slovnik/madarsky-ohar-vizsla/ + /en/dictionary/vizsla/ (11 jazyků, s fotkou) — 2026-08-03
+- Pes a miminko v jedné domácnosti — /blog/pes-a-miminko-doma/ + /en/blog/dog-and-baby-at-home/ (11 jazyků) — 2026-08-11
+Rotvajler (Rottweiler) — /slovnik/rotvajler/ + /en/dictionary/rottweiler/ (11 jazyků, s fotkou) — 2026-08-11
