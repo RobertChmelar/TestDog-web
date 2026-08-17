@@ -31,3 +31,5 @@ Maltézský psík (Maltese) — /slovnik/maltezsky-psik/ + /en/dictionary/maltes
 Maďarský ohař / vizsla — /slovnik/madarsky-ohar-vizsla/ + /en/dictionary/vizsla/ (11 jazyků, s fotkou) — 2026-08-03
 - Pes a miminko v jedné domácnosti — /blog/pes-a-miminko-doma/ + /en/blog/dog-and-baby-at-home/ (11 jazyků) — 2026-08-11
 Rotvajler (Rottweiler) — /slovnik/rotvajler/ + /en/dictionary/rottweiler/ (11 jazyků, s fotkou) — 2026-08-11
+- V kolika letech pořídit dítěti psa — /blog/v-kolika-letech-poridit-diteti-psa/ + /en/blog/what-age-should-a-child-get-a-dog/ (11 jazyků) — 2026-08-17
+Knírač malý (Miniature Schnauzer) — /slovnik/knirac-maly/ + /en/dictionary/miniature-schnauzer/ (11 jazyků, s fotkou) — 2026-08-17
