@@ -33,3 +33,5 @@ Maďarský ohař / vizsla — /slovnik/madarsky-ohar-vizsla/ + /en/dictionary/vi
 Rotvajler (Rottweiler) — /slovnik/rotvajler/ + /en/dictionary/rottweiler/ (11 jazyků, s fotkou) — 2026-08-11
 - V kolika letech pořídit dítěti psa — /blog/v-kolika-letech-poridit-diteti-psa/ + /en/blog/what-age-should-a-child-get-a-dog/ (11 jazyků) — 2026-08-17
 Knírač malý (Miniature Schnauzer) — /slovnik/knirac-maly/ + /en/dictionary/miniature-schnauzer/ (11 jazyků, s fotkou) — 2026-08-17
+- Malá plemena psů vhodná k dětem — /blog/mala-plemena-psu-k-detem/ + /en/blog/small-dog-breeds-for-kids/ (11 jazyků) — 2026-08-25
+Dobrman (Doberman) — /slovnik/dobrman/ + /en/dictionary/doberman/ (11 jazyků, s fotkou) — 2026-08-25
