@@ -35,3 +35,5 @@ Rotvajler (Rottweiler) — /slovnik/rotvajler/ + /en/dictionary/rottweiler/ (11 
 Knírač malý (Miniature Schnauzer) — /slovnik/knirac-maly/ + /en/dictionary/miniature-schnauzer/ (11 jazyků, s fotkou) — 2026-08-17
 - Malá plemena psů vhodná k dětem — /blog/mala-plemena-psu-k-detem/ + /en/blog/small-dog-breeds-for-kids/ (11 jazyků) — 2026-08-25
 Dobrman (Doberman) — /slovnik/dobrman/ + /en/dictionary/doberman/ (11 jazyků, s fotkou) — 2026-08-25
+- Velká plemena psů do rodiny — /blog/velka-plemena-psu-do-rodiny/ + /en/blog/large-dog-breeds-for-family/ (11 jazyků) — 2026-09-02
+Velškorgi pembroke (Pembroke Welsh Corgi) — /slovnik/velsky-korgi-pembroke/ + /en/dictionary/pembroke-welsh-corgi/ (11 jazyků, s fotkou) — 2026-09-02
