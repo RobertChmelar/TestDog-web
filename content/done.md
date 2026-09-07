@@ -37,3 +37,5 @@ Knírač malý (Miniature Schnauzer) — /slovnik/knirac-maly/ + /en/dictionary/
 Dobrman (Doberman) — /slovnik/dobrman/ + /en/dictionary/doberman/ (11 jazyků, s fotkou) — 2026-08-25
 - Velká plemena psů do rodiny — /blog/velka-plemena-psu-do-rodiny/ + /en/blog/large-dog-breeds-for-family/ (11 jazyků) — 2026-09-02
 Velškorgi pembroke (Pembroke Welsh Corgi) — /slovnik/velsky-korgi-pembroke/ + /en/dictionary/pembroke-welsh-corgi/ (11 jazyků, s fotkou) — 2026-09-02
+- Čím krmit psa: granule, maso, nebo BARF — /blog/cim-krmit-psa-granule-maso-barf/ + /en/blog/what-to-feed-a-dog/ (11 jazyků) — 2026-09-07
+Stafordšírský bulteriér (Staffordshire Bull Terrier) — /slovnik/stafordsirsky-bulterier/ + /en/dictionary/staffordshire-bull-terrier/ (11 jazyků, s fotkou) — 2026-09-07
