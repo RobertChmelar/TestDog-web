@@ -39,3 +39,5 @@ Dobrman (Doberman) — /slovnik/dobrman/ + /en/dictionary/doberman/ (11 jazyků,
 Velškorgi pembroke (Pembroke Welsh Corgi) — /slovnik/velsky-korgi-pembroke/ + /en/dictionary/pembroke-welsh-corgi/ (11 jazyků, s fotkou) — 2026-09-02
 - Čím krmit psa: granule, maso, nebo BARF — /blog/cim-krmit-psa-granule-maso-barf/ + /en/blog/what-to-feed-a-dog/ (11 jazyků) — 2026-09-07
 Stafordšírský bulteriér (Staffordshire Bull Terrier) — /slovnik/stafordsirsky-bulterier/ + /en/dictionary/staffordshire-bull-terrier/ (11 jazyků, s fotkou) — 2026-09-07
+- Kolik granulí denně pro psa (tabulka podle váhy) — /blog/kolik-granuli-denne-pro-psa/ + /en/blog/how-much-should-a-dog-eat/ (11 jazyků) — 2026-09-14
+Samojed (Samoyed) — /slovnik/samojed/ + /en/dictionary/samoyed/ (11 jazyků, s fotkou) — 2026-09-14
