@@ -41,3 +41,5 @@ Velškorgi pembroke (Pembroke Welsh Corgi) — /slovnik/velsky-korgi-pembroke/ +
 Stafordšírský bulteriér (Staffordshire Bull Terrier) — /slovnik/stafordsirsky-bulterier/ + /en/dictionary/staffordshire-bull-terrier/ (11 jazyků, s fotkou) — 2026-09-07
 - Kolik granulí denně pro psa (tabulka podle váhy) — /blog/kolik-granuli-denne-pro-psa/ + /en/blog/how-much-should-a-dog-eat/ (11 jazyků) — 2026-09-14
 Samojed (Samoyed) — /slovnik/samojed/ + /en/dictionary/samoyed/ (11 jazyků, s fotkou) — 2026-09-14
+- Jak naučit psa základní povely — /blog/jak-naucit-psa-zakladni-povely/ + /en/blog/how-to-teach-a-dog-basic-commands/ (11 jazyků) — 2026-09-21
+Akita inu (Akita) — /slovnik/akita-inu/ + /en/dictionary/akita/ (11 jazyků, s fotkou) — 2026-09-21
