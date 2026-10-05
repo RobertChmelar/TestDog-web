@@ -43,3 +43,5 @@ Stafordšírský bulteriér (Staffordshire Bull Terrier) — /slovnik/stafordsir
 Samojed (Samoyed) — /slovnik/samojed/ + /en/dictionary/samoyed/ (11 jazyků, s fotkou) — 2026-09-14
 - Jak naučit psa základní povely — /blog/jak-naucit-psa-zakladni-povely/ + /en/blog/how-to-teach-a-dog-basic-commands/ (11 jazyků) — 2026-09-21
 Akita inu (Akita) — /slovnik/akita-inu/ + /en/dictionary/akita/ (11 jazyků, s fotkou) — 2026-09-21
+- Jak naučit psa chodit na vodítku bez tahání — /blog/jak-naucit-psa-chodit-na-voditku/ + /en/blog/how-to-stop-a-dog-pulling-on-the-leash/ (11 jazyků) — 2026-10-05
+Dalmatin (Dalmatian) — /slovnik/dalmatin/ + /en/dictionary/dalmatian/ (11 jazyků, s fotkou) — 2026-10-05
