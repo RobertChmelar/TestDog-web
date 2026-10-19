@@ -47,3 +47,5 @@ Akita inu (Akita) — /slovnik/akita-inu/ + /en/dictionary/akita/ (11 jazyků, s
 Dalmatin (Dalmatian) — /slovnik/dalmatin/ + /en/dictionary/dalmatian/ (11 jazyků, s fotkou) — 2026-10-05
 - Jak odnaučit psa štěkat — /blog/jak-odnaucit-psa-stekat/ + /en/blog/how-to-stop-a-dog-barking/ (11 jazyků) — 2026-10-12
 Basset hound — /slovnik/basset-hound/ + /en/dictionary/basset-hound/ (11 jazyků, s fotkou) — 2026-10-12
+- Jak naučit psa zůstat sám doma — /blog/jak-naucit-psa-zustat-sam-doma/ + /en/blog/how-to-leave-a-dog-home-alone/ (11 jazyků) — 2026-10-19
+Bílý švýcarský ovčák (White Swiss Shepherd) — /slovnik/bily-svycarsky-ovcak/ + /en/dictionary/white-swiss-shepherd/ (11 jazyků, s fotkou) — 2026-10-19
