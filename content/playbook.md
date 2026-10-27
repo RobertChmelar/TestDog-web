@@ -29,6 +29,9 @@ složkou v cestě). Pak vše commitni a pushni; GitHub Pages nasadí web automat
   (typicky cyrilice – např. „krokom**ером**" místo „krokom**erom**", nebo „**само**"
   místo „samo"). Vypadá to jako překlep a kazí to dojem. Piš důsledně v abecedě
   daného jazyka.
+- **Žádné kalky a neznámé značky.** Nepiš doslovně přeložené odborné výrazy ani názvy
+  produktů, které běžný čtenář nezná (např. „krmná hračka“, „kong“). Popiš věc obyčejnými
+  slovy: „gumová hračka plná pamlsků, ze které je pes musí vydolovat“.
 - **Pomlčky (– / —) používej střídmě.** Můžou být, ale jen tam, kde dávají v daném
   jazyce opravdu smysl (např. odsazení popisku za tučným výrazem v odrážce, číselný
   rozsah „2–3 hodiny"). V běžných větách je nahrazuj čárkou, tečkou nebo dvojtečkou –

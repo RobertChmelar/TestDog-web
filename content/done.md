@@ -19,7 +19,7 @@ Agent sem po každém běhu připíše nový článek i plemeno (název, obě UR
 ## Plemena (už uvedená ve slovníku – NEZAKLÁDAT znovu)
 Labrador, Zlatý retrívr, Pudl, Bígl, Kavalír king charles španěl, Bernský salašnický pes,
 Kokršpaněl, Boxer, Bišonek, Border kolie, Německý ovčák, Jack russell teriér, Jezevčík,
-Mops, Čivava, Sibiřský husky, Kříženec z útulku, Francouzský buldoček,
+Mops, Čivava, Sibiřský husky, Kříženec z útulku, Francouzský buldoček, Kokršpaněl anglický (= Kokršpaněl, /slovnik/kokrspanel/),
 Yorkshire teriér — /slovnik/yorkshire-terier/ + /en/dictionary/yorkshire-terrier/ — 2026-07-06
 Německý špic (Pomeranian) — /slovnik/nemecky-spic/ + /en/dictionary/pomeranian/ (+ DE/ES/PL/SK) — 2026-07-11
 Australský ovčák (Australian Shepherd) — /slovnik/australsky-ovcar/ + /en/dictionary/australian-shepherd/ (+ DE/ES/PL/SK) — 2026-07-13
@@ -49,3 +49,5 @@ Dalmatin (Dalmatian) — /slovnik/dalmatin/ + /en/dictionary/dalmatian/ (11 jazy
 Basset hound — /slovnik/basset-hound/ + /en/dictionary/basset-hound/ (11 jazyků, s fotkou) — 2026-10-12
 - Jak naučit psa zůstat sám doma — /blog/jak-naucit-psa-zustat-sam-doma/ + /en/blog/how-to-leave-a-dog-home-alone/ (11 jazyků) — 2026-10-19
 Bílý švýcarský ovčák (White Swiss Shepherd) — /slovnik/bily-svycarsky-ovcak/ + /en/dictionary/white-swiss-shepherd/ (11 jazyků, s fotkou) — 2026-10-19
+- Výchova štěněte: první tři měsíce — /blog/vychova-stenete-prvni-tri-mesice/ + /en/blog/puppy-training-first-three-months/ (11 jazyků) — 2026-10-26
+Bordeauxská doga (Dogue de Bordeaux) — /slovnik/bordeauxska-doga/ + /en/dictionary/dogue-de-bordeaux/ (11 jazyků, s fotkou) — 2026-10-26
