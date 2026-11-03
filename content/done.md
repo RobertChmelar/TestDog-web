@@ -51,3 +51,5 @@ Basset hound — /slovnik/basset-hound/ + /en/dictionary/basset-hound/ (11 jazyk
 Bílý švýcarský ovčák (White Swiss Shepherd) — /slovnik/bily-svycarsky-ovcak/ + /en/dictionary/white-swiss-shepherd/ (11 jazyků, s fotkou) — 2026-10-19
 - Výchova štěněte: první tři měsíce — /blog/vychova-stenete-prvni-tri-mesice/ + /en/blog/puppy-training-first-three-months/ (11 jazyků) — 2026-10-26
 Bordeauxská doga (Dogue de Bordeaux) — /slovnik/bordeauxska-doga/ + /en/dictionary/dogue-de-bordeaux/ (11 jazyků, s fotkou) — 2026-10-26
+- Náklady na štěně první rok (kompletní rozpočet) — /blog/naklady-na-stene-prvni-rok/ + /en/blog/puppy-cost-first-year/ (11 jazyků) — 2026-11-03
+Whippet (chrt) — /slovnik/whippet/ + /en/dictionary/whippet/ (11 jazyků, s fotkou) — 2026-11-03
