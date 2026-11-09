@@ -39,6 +39,11 @@ nové položky z Google Trends / napovídače a doplní je nahoru.
 
 ## Fronta PLEMEN (odshora, dle popularity v ČR)
 Plemena už zpracovaná v tabulce slovníku jsou v done.md – ta přeskoč.
+01. Belgický ovčák malinois
+02. Cane corso
+03. Československý vlčák
+04. Šeltie (shetlandský ovčák)
+05. West highland white teriér (westík)
 1. Francouzský buldoček
 2. Yorkshire teriér
 3. Německý špic / pomeranian

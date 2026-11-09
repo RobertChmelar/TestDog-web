@@ -53,3 +53,5 @@ Bílý švýcarský ovčák (White Swiss Shepherd) — /slovnik/bily-svycarsky-o
 Bordeauxská doga (Dogue de Bordeaux) — /slovnik/bordeauxska-doga/ + /en/dictionary/dogue-de-bordeaux/ (11 jazyků, s fotkou) — 2026-10-26
 - Náklady na štěně první rok (kompletní rozpočet) — /blog/naklady-na-stene-prvni-rok/ + /en/blog/puppy-cost-first-year/ (11 jazyků) — 2026-11-03
 Whippet (chrt) — /slovnik/whippet/ + /en/dictionary/whippet/ (11 jazyků, s fotkou) — 2026-11-03
+- Kastrace a sterilizace psa: pro a proti — /blog/kastrace-a-sterilizace-psa/ + /en/blog/spaying-and-neutering-dogs/ (11 jazyků) — 2026-11-09
+Belgický ovčák malinois (Belgian Malinois) — /slovnik/belgicky-ovcak-malinois/ + /en/dictionary/belgian-malinois/ (11 jazyků, s fotkou) — 2026-11-09
