@@ -86,11 +86,15 @@ Nikdy nepiš, že Android teprve „chystáme“ – aplikace je venku na obou p
    - **přepínač jazyka** (`.langsel` v `nav`): tlačítko ukazuje aktuální jazyk,
      menu obsahuje zbylých 10 odkazů na konkrétní jazykové protějšky stránky.
 6. **Rozcestníky a tabulky** – přidej:
-   - kartu článku na začátek `.post-grid` ve **všech 11** blog indexech
-     (`/blog/index.html` a `/<xx>/blog/index.html`), text karty v jazyce daného indexu;
+   - kartu článku **na KONEC** `.post-grid` (za poslední kartu) ve **všech 11** blog
+     indexech (`/blog/index.html` a `/<xx>/blog/index.html`), text karty v jazyce daného
+     indexu. Blog je řazený od nejstaršího: nahoře jsou témata „před pořízením psa“,
+     nové články se vždy přidávají na konec. Pořadí existujících karet neměň;
    - odkazovaný řádek plemene do tabulky `.breed-table > tbody` ve **všech 11**
      slovníkových indexech (`/slovnik/index.html` a `/<xx>/dictionary/index.html`),
-     texty buněk v jazyce indexu.
+     texty buněk v jazyce indexu. Tabulky jsou řazené **abecedně podle místního názvu
+     plemene** (v CZ/SK „ch“ za „h“, písmena s háčkem za základním písmenem) – nový
+     řádek vlož na správné abecední místo, ne na začátek.
 7. **Vnitřní prolinkování v textu (interní linkbuilding – NEVYNECHÁVAT).** V novém
    článku i v novém profilu plemene projdi text a každé **jméno plemene, které má
    vlastní stránku ve slovníku daného jazyka**, obal odkazem na tu stránku
