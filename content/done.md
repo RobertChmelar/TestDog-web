@@ -57,3 +57,5 @@ Whippet (chrt) — /slovnik/whippet/ + /en/dictionary/whippet/ (11 jazyků, s fo
 Belgický ovčák malinois (Belgian Malinois) — /slovnik/belgicky-ovcak-malinois/ + /en/dictionary/belgian-malinois/ (11 jazyků, s fotkou) — 2026-11-09
 - Čipování, očkování a odčervení psa — /blog/cipovani-ockovani-odcerveni-psa/ + /en/blog/dog-vaccinations-microchipping-deworming/ (11 jazyků) — 2026-11-16
 Cane corso — /slovnik/cane-corso/ + /en/dictionary/cane-corso/ (11 jazyků, s fotkou) — 2026-11-16
+- Jak poznat, že je pes nemocný (varovné signály) — /blog/jak-poznat-ze-je-pes-nemocny/ + /en/blog/signs-your-dog-is-sick/ (11 jazyků) — 2026-11-24
+Československý vlčák (Czechoslovakian Wolfdog) — /slovnik/ceskoslovensky-vlcak/ + /en/dictionary/czechoslovakian-wolfdog/ (11 jazyků, s fotkou) — 2026-11-24
