@@ -101,7 +101,10 @@ Nikdy nepiš, že Android teprve „chystáme“ – aplikace je venku na obou p
    (`/slovnik/<cz-slug>/` resp. `/<xx>/dictionary/<en-slug>/`). Než odkaz vytvoříš,
    ověř (`ls slovnik/` / `ls <xx>/dictionary/`), že stránka v tom konkrétním jazyce
    reálně existuje. Každé plemeno linkuj jen při **prvním výskytu** v textu, ne opakovaně.
-   Plemena bez vlastní stránky nech jako běžný text.
+   **Výjimka:** závěrečný odstavec profilu plemene s tipy na podobná/alternativní plemena
+   („Přehled dalších plemen najdeš ve slovníku… Podobný je X, klidnější Y…“) je rozcestník –
+   v něm prolinkuj **každé** zmíněné plemeno se stránkou, i když už bylo prolinkované výš
+   v textu. Plemena bez vlastní stránky nech jako běžný text.
 8. **Korektura (NEVYNECHÁVAT) – přečti každý text, než ho pustíš ven.** Projdi všech
    22 stránek a u každé zkontroluj:
    - **gramatiku, diakritiku a smysl vět** v daném jazyce – čti text tak, jako by ho
